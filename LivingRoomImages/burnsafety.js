@@ -16,8 +16,7 @@ var imgClicked = function(id){
 	alert(hashValue[id.toString()]);
 	$("#"+id).remove();
 	$("#"+id+"Button").remove();
-	element.parentNode.removeChild(element);
 	hazardsCollected++;
 	//this isn't working yet.
-	document.getElementById("counter").innerHTML = "We have found "+getHazardString+"/10 hazards.";
+	document.getElementById("counter").innerHTML = "We have found "+hazardsCollected+"/10 hazards.";
 }
