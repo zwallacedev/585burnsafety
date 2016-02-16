@@ -21,18 +21,23 @@
     width: 2048px;
     position:absolute;
 }
-.coffee-btn{
+.btn{
 
             background-color: black;
             background-repeat:no-repeat;
             border: none;
             cursor:pointer;
             overflow: hidden;
-            height:5em;
-            width:5em;
+            position: absolute;
+            
 
         }
-
+.coffee-btn{
+    height:5em;
+    width:5em;
+    left:860px;
+    top:1198px;
+}
 .z1{
     position: relative;
     z-index: 1;
