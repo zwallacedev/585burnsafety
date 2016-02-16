@@ -58,3 +58,22 @@
     position: relative;
     z-index: 5;
 }
+
+.frayed-btn{
+    height:3em;
+    width:3em;
+    left:1525px;
+    top:760px;
+}
+.lighter-btn{
+    height:2.2em;
+    width:4.4em;
+    left:620px;
+    top:1290px;
+}
+.space-btn{
+    height:10em;
+    width:11em;
+    left:1570px;
+    top:1200px;
+}
