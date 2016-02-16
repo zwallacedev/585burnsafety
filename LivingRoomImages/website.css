@@ -1,0 +1,13 @@
+html {
+	background-image:url("background.png");
+	   background-repeat: no-repeat;
+    background-size: 100% 510px;
+    background-color:#000000;
+}
+.testing {
+	display: block;
+	 float: left;
+}
+.halfway-down {
+	
+}
