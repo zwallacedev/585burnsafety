@@ -8,8 +8,16 @@ var hashValue= {
 	'matchesImage': 'Matches left out where the child can reach.',
 	'outletCoverImage': 'Outlet error.',
 	'powerStripImage': 'Power strip error.',
-	'spaceHeaterImage':'Space heater error.',
+	'spaceHeaterImage':'Space heater shouldn\'t be so close to the couch.',
 }
+var hazardsCollected = 0;
+
 var imgClicked = function(id){
 	alert(hashValue[id.toString()]);
+	$("#"+id).remove();
+	$("#"+id+"Button").remove();
+	element.parentNode.removeChild(element);
+	hazardsCollected++;
+	document.getElementById("counter").innerHTML = ""+getHazardString;
 }
+var getHazardString = hazardsCollected+"/10";
