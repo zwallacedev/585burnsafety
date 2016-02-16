@@ -37,6 +37,21 @@
     width:5em;
     left:860px;
     top:1198px;
+    position: absolute;
+}
+.at-btn{
+    height:4.5em;
+    width:5em;
+    left:350px;
+    top:970px;
+    position: absolute;
+}
+.match-btn{
+    height:4.5em;
+    width:5em;
+    left:990px;
+    top:1200px;
+    position: absolute;
 }
 .z1{
     position: relative;
