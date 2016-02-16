@@ -23,20 +23,59 @@
 }
 .btn{
 
-            background-color: black;
+            background-color: transparent;
             background-repeat:no-repeat;
-            border: none;
+            border: solid black;
             cursor:pointer;
             overflow: hidden;
             position: absolute;
-            
+            z-index:10;
 
         }
 .coffee-btn{
     height:5em;
     width:5em;
-    left:860px;
-    top:1198px;
+    left:862px;
+    top:1185px;
+    position: absolute;
+}
+.ashTray-btn{
+    height:4.3em;
+    width:8em;
+    left:330px;
+    top:970px;
+    position: absolute;
+}
+.match-btn{
+    height:4.2em;
+    width:6em;
+    left:990px;
+    top:1200px;
+    position: absolute;
+}
+.smokeDetector-btn{
+    height: 10.5em;
+    width: 15em;
+    left:1560px;
+    top: 10px;
+}
+.outletCover-btn{
+    height: 5em;
+    width: 5em;
+    left:415px;
+    top: 1050px;
+}
+.candle-btn{
+    height: 12.5em;
+    width: 5em;
+    left:234px;
+    top: 830px;
+}
+.powerStrip-btn{
+    height: 5.5em;
+    width: 8em;
+    left:1800px;
+    top: 1240px;
 }
 .z1{
     position: relative;
