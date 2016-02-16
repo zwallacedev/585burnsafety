@@ -1,4 +1,4 @@
-html {
+.notusingthisinthisversion {
 	background-image:url("background.png");
 	   background-repeat: no-repeat;
     background-size: 100% 510px;
@@ -11,3 +11,14 @@ html {
 .halfway-down {
 	
 }
+.button {
+
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            height:5em;
+            width:5em;
+
+        }

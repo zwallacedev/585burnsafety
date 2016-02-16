@@ -14,8 +14,20 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 <div class="container-fluid">
+<table id="myTable" background="background.png" width="500px">
+	<script language="javascript" type="text/javascript">
+        for (var a=0; a < 25; a++) {
+            document.write("<tr>");
+            for(var b=0; b<33; b++) {
+                document.write("<td><button class='button'>"+(40*(a)+b)+"</button></td>");
+        }
+        document.write("</tr>");
+        }
+    </script>
+</table>
 
 </div>
 
