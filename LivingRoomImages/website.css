@@ -1,12 +1,16 @@
-.notusingthisinthisversion {
+.hsaffstml {
 	background-image:url("background.png");
 	   background-repeat: no-repeat;
     background-size: 100% 510px;
-    background-color:#000000;
+    background-color:#000000;   
 }
-.testing {
-	display: block;
-	 float: left;
+.divBack {
+    background-image:url("background.png");
+       background-repeat: no-repeat;
+    background-size: 100% 1536px;
+    background-color:#000000;   
+    height: 1538px;
+    width: 2048px;
 }
 .halfway-down {
 	
@@ -22,3 +26,23 @@
             width:5em;
 
         }
+.z1{
+    position: relative;
+    z-index: 1;
+}
+.z2{
+    position: relative;
+    z-index: 2;
+}
+.z3{
+    position: relative;
+    z-index: 3;
+}
+.z4{
+    position: relative;
+    z-index: 4;
+}
+.z5{
+    position: relative;
+    z-index: 5;
+}
