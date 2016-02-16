@@ -18,6 +18,6 @@ var imgClicked = function(id){
 	$("#"+id+"Button").remove();
 	element.parentNode.removeChild(element);
 	hazardsCollected++;
-	document.getElementById("counter").innerHTML = ""+getHazardString;
+	//this isn't working yet.
+	document.getElementById("counter").innerHTML = "We have found "+getHazardString+"/10 hazards.";
 }
-var getHazardString = hazardsCollected+"/10";
