@@ -19,4 +19,7 @@ var imgClicked = function(id){
 	hazardsCollected++;
 	//this isn't working yet.
 	document.getElementById("counter").innerHTML = "We have found "+hazardsCollected+"/10 hazards.";
+	if(hazardsCollected==10){
+		alert('You won!! Congrats!');
+	}
 }
