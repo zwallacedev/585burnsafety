@@ -31,7 +31,7 @@ $(document).ready(function () {
       $("#workingSD").css('visibility', 'visible');
     }
     incrementCnt();
-    imgClicked(this.id);
+    alert(hashValue[this.id.toString()]);
   });
 
   $('.container-fluid').click(function(e){
@@ -48,18 +48,4 @@ var incrementCnt = function(){
   if(hazardsFound==10){
     $("#levelWin").css('visibility', 'visible');
   }
-};
-var imgClicked = function(id){
-  alert(hashValue[id.toString()]);
-  $("#"+id).remove();
-  $("#"+id+"Button").remove();
-  hazardsCollected++;
-  //this isn't working yet.
-  document.getElementById("counter").innerHTML = "We have found "+hazardsCollected+"/10 hazards.";
-  if(hazardsCollected==10){
-    alert('You won!! Congrats!');
-  }
-};
-var initGame = function() {
-  
 }
