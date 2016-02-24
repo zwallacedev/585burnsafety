@@ -6,7 +6,7 @@ var hashValue= {
 	'frayedTVWireImage': 'Frayed TV Wire can cause an electrical fire.',
 	'lighterImage': 'Lighter left out where the baby could reach.',
 	'matchesImage': 'Matches left out where the child can reach.',
-	'outletCoverImage': 'Outlet error.',
+	'outletCoverImage': 'You should have Outlet Covers.',
 	'powerStripImage': 'Power strip error.',
 	'spaceHeaterImage':'Space heater shouldn\'t be so close to the couch.',
 }

@@ -10,7 +10,11 @@ h1 {
 	top: 0;
 	left: 0;
 }
-
+.middle-of-page {
+	position: fixed;
+	left:45%;
+	top:50%;
+}
 .background-img {
     height: 100%;
     width: 100%;
