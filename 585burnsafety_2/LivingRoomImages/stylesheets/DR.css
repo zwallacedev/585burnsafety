@@ -1,0 +1,32 @@
+div {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.square {
+  width: 20%;
+  height: 20%;
+}
+
+#flame {
+  position: absolute;
+  top: 48%;
+  left: 46%;
+  height: 34%;
+  width: 10%;
+}
+
+#one {
+  background-color: blue;
+  top: 50%
+}
+
+#two {
+  background-color: red;
+  left: 50%;
+}
+
+#three {
+  background-color: green;
+}
