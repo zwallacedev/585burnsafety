@@ -127,3 +127,48 @@ h1 {
 	height: 100%;
 	visibility: hidden;
 }
+
+
+#ramen {
+	position: fixed;
+	left: 25%;
+	top: 46%;
+	width: 5%;
+	height: 15%;
+}
+
+#potOfWater {
+	position:fixed;
+	left:40.5%;
+	top:48.5%;
+	width:5%;
+	height:15%;
+}
+#fork {
+	position:fixed;
+	left:40.5%;
+	top:35%;
+	width:8%;
+	height:3%;
+}
+#toddler {
+	position: fixed;
+	left:9%;
+	top:62%;
+	width:22%;
+	height:35%;
+}
+#baby {
+	position: fixed;
+	left:43%;
+	top:75%;
+	width:15%;
+	height:25%;
+}
+#formula {
+	position: fixed;
+	left:55%;
+	top:90%;
+	width:5%;
+	height:10%;
+}

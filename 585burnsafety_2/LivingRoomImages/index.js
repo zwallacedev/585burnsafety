@@ -11,6 +11,10 @@ var hashValue= {
   'outletCover': 'You should have Outlet Covers.',
   'powerStrip': 'Power strip error.',
   'spaceHeater':'Space heater shouldn\'t be so close to the couch.',
+  'ramen': 'There is a hot bowl of ramen where the toddler is trying to reach.',
+  'potOfWater': 'The handle of the pot is sticking out.',
+  'fork': 'There\'s a fork in the microwave, and this definitely shouldn\'t be there.',
+  'formula': 'You shouldn\'t give a toddler hot formula because it has hot spots.'
 }
 $(document).ready(function () {
   $('.goodClick').click(function(e){
