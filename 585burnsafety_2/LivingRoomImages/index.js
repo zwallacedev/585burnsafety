@@ -1,5 +1,6 @@
 var hazardsFound = 0;
 var outletFixed = false;
+var ovenMittOn = false;
 var hashValue= {
   'ashTray': 'There\'s a lit cigarette in the ash tray.',
   'brokenSD': 'The Smoke detector should be working.',
@@ -27,6 +28,15 @@ $(document).ready(function () {
         $("#outletCover").css('opacity', '1');
         incrementCnt();
         outletFixed = true;
+      }
+      return;
+    }
+
+    if(this.id == "ovenMitt"){
+      if(!ovenMittOn){
+        $("#ovenMitt").css('opacity', '1');
+        incrementCnt();
+        ovenMittOn = true;
       }
       return;
     }
