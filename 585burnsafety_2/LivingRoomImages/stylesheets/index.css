@@ -221,3 +221,11 @@ h1 {
 	height: 7.3%;
 	opacity: 0;
 }
+
+#ramenBox {
+	position:fixed;
+	left:41.5%;
+	top:13.8%;
+	width:7%;
+	height:5%;
+}
