@@ -1,11 +1,16 @@
-var oneStop = false;
-var twoStop = false;
-var threeStop = false;
+var aerosolStop = false;
+var towelStop = false;
+var np1Stop = false;
+var np2Stop = false;
+var sillyStop = false;
 var origOffset;
 
 $(document).ready(function () {
-  $(".square").draggable();
-  $(".square").mouseup(function( event ) {
+  $(".drag").draggable();
+  $('.drag').each(function(){
+    $(this).css({'top' : getRandomInt(20,70)+'%', 'left' : getRandomInt(20,70)+'%'});
+  });
+  $(".drag").mouseup(function( event ) {
     //var pageCoords = "( " + event.pageX + ", " + event.pageY + " )";
 
     //object specs
@@ -15,16 +20,24 @@ $(document).ready(function () {
     var objectCenterX = objectOffset.left + (objectWidth/2);
     var objectCenterY = objectOffset.top + (objectHeight/2);
 
-    if(oneStop && (event.target.id != "one")){
-      alert("please move box one");
+    if(aerosolStop && (event.target.id != "aerosol")){
+      alert("please move aerosol");
       $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
       return;
-    }else if(twoStop && (event.target.id != "two")){
-      alert("please move box two");
+    }else if(towelStop && (event.target.id != "beachTowel")){
+      alert("please move beach towel");
       $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
       return;
-    }else if(threeStop && (event.target.id != "three")){
-      alert("please move box three");
+    }else if(np1Stop && (event.target.id != "np1")){
+      alert("please move nail polish 1");
+      $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
+      return;
+    }else if(np2Stop && (event.target.id != "np2")){
+      alert("please move nail polish 2");
+      $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
+      return;
+    }else if(sillyStop && (event.target.id != "sillyString")){
+      alert("please move nail silly string");
       $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
       return;
     }
@@ -40,29 +53,41 @@ $(document).ready(function () {
     var dist = Math.sqrt( (Math.pow(flameCenterX - objectCenterX,2)) + (Math.pow(flameCenterY - objectCenterY,2)) )
 
     if(dist < 200){
-      alert("Box " + event.target.id + " is too close to the frame.  Please move it away.");
+      alert(event.target.id + " is too close to the frame.  Please move it away.");
       switch(event.target.id){
-        case "one":
-          oneStop = true;
+        case "aerosol":
+          aerosolStop = true;
           break;
-        case "two":
-          twoStop = true;
+        case "beachTowel":
+          towelStop = true;
           break;
-        case "three":
-          threeStop = true;
+        case "np1":
+          np1Stop = true;
+          break;
+        case "np2":
+          np2Stop = true;
+          break;
+        case "sillyString":
+          sillyStop = true;
           break;
         default:
           break;
       }
     }else{
-      oneStop = false;
-      twoStop = false;
-      threeStop = false;
+      aerosolStop = false;
+      towelStop = false;
+      np1Stop = false;
+      np2Stop = false;
+      sillyStop = false;
     }
   });
 
-  $(".square").mousedown(function( event ) {
+  $(".drag").mousedown(function( event ) {
     origOffset = $("#"+event.target.id).offset();
   });
 
 });
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
