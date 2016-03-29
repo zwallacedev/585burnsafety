@@ -1,7 +1,48 @@
-div {
+.container-fluid {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.background-img {
+    height: 100%;
+    width: 100%;
+}
+
+.helper {
   position: fixed;
-  height: 100%;
-  width: 100%;
+  display: none;
+  border: 5px solid yellow;
+}
+
+#shelf1 {
+  width: 15%;
+  height: 14%;
+  top: 10%;
+  left: 61%;
+}
+
+#shelf2 {
+  width: 15%;
+  height: 19%;
+  top: 24%;
+  left: 61%;
+}
+
+#shelf3 {
+  width: 15%;
+  height: 15%;
+  top: 42%;
+  left: 61%;
+}
+
+#shelf4 {
+  width: 15%;
+  height: 15%;
+  top: 56%;
+  left: 61%;
 }
 
 #aerosol {
@@ -25,11 +66,11 @@ div {
 }
 
 #flame {
-  position: absolute;
-  top: 48%;
+  position: fixed;
+  top: 70%;
   left: 46%;
-  height: 34%;
-  width: 10%;
+  height: 22%;
+  width: 12%;
 }
 
 #one {

@@ -3,6 +3,7 @@ var towelStop = false;
 var np1Stop = false;
 var np2Stop = false;
 var sillyStop = false;
+var isDown = false;
 var origOffset;
 
 $(document).ready(function () {
@@ -10,7 +11,27 @@ $(document).ready(function () {
   $('.drag').each(function(){
     $(this).css({'top' : getRandomInt(20,70)+'%', 'left' : getRandomInt(20,70)+'%'});
   });
+
+  $(".drag").hover(function( event ) {
+    if(!isDown){
+      thisWidth = $("#"+event.target.id).width();
+      thisHeight = $("#"+event.target.id).height();
+      $("#"+event.target.id).width(thisWidth+10);
+      $("#"+event.target.id).height(thisHeight+10);
+    }
+  }, function( event ) {
+    if(!isDown){
+      $("#"+event.target.id).width(thisWidth);
+      $("#"+event.target.id).height(thisHeight);
+    }
+  });
+
   $(".drag").mouseup(function( event ) {
+    $("#"+event.target.id).width(thisWidth);
+    $("#"+event.target.id).height(thisHeight);
+    $(".helper").hide();
+    isDown = false;
+
     //var pageCoords = "( " + event.pageX + ", " + event.pageY + " )";
 
     //object specs
@@ -52,8 +73,8 @@ $(document).ready(function () {
 
     var dist = Math.sqrt( (Math.pow(flameCenterX - objectCenterX,2)) + (Math.pow(flameCenterY - objectCenterY,2)) )
 
-    if(dist < 200){
-      alert(event.target.id + " is too close to the frame.  Please move it away.");
+    if(dist < 150){
+      alert(event.target.id + " is too close to the heater.  Please move it away.");
       switch(event.target.id){
         case "aerosol":
           aerosolStop = true;
@@ -83,7 +104,27 @@ $(document).ready(function () {
   });
 
   $(".drag").mousedown(function( event ) {
+    isDown = true;
     origOffset = $("#"+event.target.id).offset();
+    switch(event.target.id){
+      case "aerosol":
+        $("#shelf1").toggle();
+        break;
+      case "beachTowel":
+        $("#shelf2").toggle();
+        break;
+      case "np1":
+        $("#shelf3").toggle();
+        break;
+      case "np2":
+        $("#shelf3").toggle();
+        break;
+      case "sillyString":
+        $("#shelf4").toggle();
+        break;
+      default:
+        break;
+    }
   });
 
 });
