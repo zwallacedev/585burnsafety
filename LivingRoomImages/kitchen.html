@@ -39,22 +39,22 @@
 	    function updateTimer()
 	    {
 
-	    	msLeft = (+new Date) - startTime + 500;
-	        //msLeft = endTime - (+new Date);
-	        //if ( msLeft < 1000 ) {
-	        //    alert('game over!');
-	        //} else {
+	    	//msLeft = (+new Date) - startTime + 500;
+	        msLeft = endTime - (+new Date);
+	        if ( msLeft < 0 ) {
+	            alert('game over!');
+	        } else {
 	            time = new Date( msLeft );
 	            mins = time.getUTCMinutes();
 	            //$("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
 	            $("#kitchenTimer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
 	            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-	        //}
+	        }
 	    }
 
 	    //element = document.getElementById( elementName );
 	    //alert('here: '+element);
-	    startTime = (+new Date);
+	    //startTime = (+new Date);
 	    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
 	    updateTimer();
 	}
