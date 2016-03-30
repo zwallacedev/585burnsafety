@@ -292,37 +292,37 @@ h1 {
 }
 #boxes {
 	position:fixed;
-	left:57.5%;
+	left:61%;
 	top:58.5%;
-	width:20%;
+	width:16%;
 	height:25%;
 }
 #fertilizer {
 	position:fixed;
-	left:41.5%;
-	top:13.8%;
-	width:7%;
-	height:5%;
+	left:16%;
+	top:85%;
+	width:9%;
+	height:7.5%;
 }
 #gasCan {
 	position:fixed;
-	left:41.5%;
-	top:13.8%;
-	width:7%;
-	height:5%;
+	left:82%;
+	top:83%;
+	width:3.2%;
+	height:9%;
 }
 #hotExhaust {
 	position:fixed;
-	left:41.5%;
-	top:13.8%;
-	width:7%;
-	height:5%;
+	left:41.37%;
+	top:87.5%;
+	width:3.5%;
+	height:3%;
 }
 #extCord {
 	position:fixed;
-	left:41.5%;
-	top:13.8%;
-	width:7%;
-	height:5%;
+	left:23.4%;
+	top:74.2%;
+	width:4%;
+	height:10%;
 }
 
