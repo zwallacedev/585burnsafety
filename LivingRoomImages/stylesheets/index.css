@@ -229,3 +229,61 @@ h1 {
 	width:7%;
 	height:5%;
 }
+
+#bbqLighter {
+	position:fixed;
+	left:85%;
+	top:94%;
+	width:5%;
+	height:5%;
+}
+#garageBaby {
+	position: fixed;
+	left:33%;
+	top:86%;
+	width:8%;
+	height:15%;
+}
+#bleach {
+	position:fixed;
+	left:75%;
+	top:89%;
+	width:3.2%;
+	height:10%;
+}
+#boxes {
+	position:fixed;
+	left:57.5%;
+	top:58.5%;
+	width:20%;
+	height:25%;
+}
+#fertilizer {
+	position:fixed;
+	left:41.5%;
+	top:13.8%;
+	width:7%;
+	height:5%;
+}
+#gasCan {
+	position:fixed;
+	left:41.5%;
+	top:13.8%;
+	width:7%;
+	height:5%;
+}
+#hotExhaust {
+	position:fixed;
+	left:41.5%;
+	top:13.8%;
+	width:7%;
+	height:5%;
+}
+#extCord {
+	position:fixed;
+	left:41.5%;
+	top:13.8%;
+	width:7%;
+	height:5%;
+}
+
