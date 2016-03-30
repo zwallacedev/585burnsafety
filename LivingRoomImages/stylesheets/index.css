@@ -26,7 +26,11 @@ h1 {
 	top:59%;
 	left:34%;
 }
-
+#timer {
+	opacity: 1;
+	top: 40%;
+	left:5%;
+}
 #counter {
 	position: fixed;
 	background-color: transparent;
@@ -42,16 +46,16 @@ h1 {
 #ashTray {
 	position: fixed;
 	left: 10%;
-	top: 57%;
+	top: 58%;
 	height: 10%;
 	width: 5%;
 }
 #kitchenAshTray {
 	position: fixed;
-	left: 70%;
-	top: 52%;
-	height: 10%;
-	width: 5%;
+	left: 14%;
+	top: 54%;
+	height: 8%;
+	width: 4%;
 }
 
 #brokenSD {
@@ -79,10 +83,10 @@ h1 {
 }
 #kitchenCoffee {
 	position: fixed;
-	left: 55%;
-	top: 51%;
-	height: 12%;
-	width: 6%;
+	left: 7%;
+	top: 52%;
+	height: 10%;
+	width: 5%;
 }
 
 #fray {
@@ -103,8 +107,8 @@ h1 {
 
 #kitchenLighter {
 	position: fixed;
-	left: 30%;
-	top: 90%;
+	left: 25%;
+	top: 92%;
 	width: 7%;
 	height: 8%;
 }
@@ -172,35 +176,67 @@ h1 {
 #potOfWater {
 	position:fixed;
 	left:40.5%;
-	top:48.5%;
-	width:5%;
-	height:15%;
+	top:49.8%;
+	width:4.5%;
+	height:13%;
 }
 #fork {
 	position:fixed;
 	left:40.5%;
-	top:35%;
+	top:31.3%;
 	width:8%;
 	height:3%;
 }
 #toddler {
 	position: fixed;
-	left:9%;
+	left:14%;
 	top:62%;
-	width:16%;
-	height:35%;
+	width:12.5%;
+	height:38%;
 }
 #baby {
 	position: fixed;
-	left:43%;
-	top:75%;
-	width:15%;
-	height:25%;
+	left:38%;
+	top:79%;
+	width:12%;
+	height:21%;
 }
 #formula {
 	position: fixed;
-	left:55%;
-	top:90%;
-	width:5%;
-	height:10%;
+	left:49%;
+	top:84%;
+	width:3%;
+	height:14%;
+}
+#adultCooking{
+	position: fixed;
+	left:54%;
+	top: 29%;
+	width: 22%;
+	height: 70%;
+}
+
+#smallBurner{
+	position:fixed;
+	left:34.24%;
+	top:59.4%;
+	width:4.3%;
+	height:1.5%;
+}
+
+#ovenMitt{
+	position: fixed;
+	left: 65.7%;
+	top: 57.8%;
+	width: 4%;
+	height: 7.3%;
+	opacity: 0;
+}
+
+#ramenBox {
+	position:fixed;
+	left:41.5%;
+	top:13.8%;
+	width:7%;
+	height:5%;
 }

@@ -1,5 +1,6 @@
 var hazardsFound = 0;
 var outletFixed = false;
+var ovenMittOn = false;
 var hashValue= {
   'ashTray': 'There\'s a lit cigarette in the ash tray.',
   'brokenSD': 'The Smoke detector should be working.',
@@ -20,7 +21,9 @@ var hashValue= {
   'burner': 'The front burner is on.',
   'kitchenAshTray': 'There\'s a lit cigarette in the ash tray.',
   'kitchenLighter': 'There\'s a lighter in the reach of a child.',
-  'kitchenCoffee': 'There\'s a hot coffee that can be easily knocked off the counter.'
+  'kitchenCoffee': 'There\'s a hot coffee that can be easily knocked off the counter.',
+  'ramenBox': 'There shouldn\'t be anything on top of the microwave.',
+  'ovenMitt': 'You should wear an ovenmitt when pulling something out of the oven.'
 }
 $(document).ready(function () {
   $('.goodClick').click(function(e){
@@ -33,6 +36,16 @@ $(document).ready(function () {
         $("#outletCover").css('opacity', '1');
         incrementCnt();
         outletFixed = true;
+      }
+      return;
+    }
+
+    if(this.id == "ovenMitt"){
+      if(!ovenMittOn){
+        $("#ovenMitt").css('opacity', '1');
+        incrementCnt();
+        ovenMittOn = true;
+        alert(hashValue[this.id.toString()]);
       }
       return;
     }
@@ -77,8 +90,9 @@ function countdown( elementName, minutes, seconds )
             time = new Date( msLeft );
             hours = time.getUTCHours();
             mins = time.getUTCMinutes();
-            $("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+            //$("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            $("#timer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
+           setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         }
     }
 
@@ -88,4 +102,3 @@ function countdown( elementName, minutes, seconds )
     updateTimer();
 }
 
-countdown( "timer", 1, 15 );
