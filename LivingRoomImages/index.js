@@ -67,7 +67,7 @@ $(document).ready(function () {
 
 var incrementCnt = function(){
   hazardsFound++;
-  $("#counter").html(hazardsFound);
+  $(".counter").html(hazardsFound);
   if(hazardsFound==10){
     $("#levelWin").css('visibility', 'visible');
   }
