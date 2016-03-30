@@ -19,6 +19,13 @@ h1 {
     height: 100%;
     width: 100%;
 }
+#burner {
+	position: fixed;
+	height:2%;
+	width:5%;
+	top:59%;
+	left:34%;
+}
 
 #counter {
 	position: fixed;

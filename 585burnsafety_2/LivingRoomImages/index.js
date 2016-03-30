@@ -14,7 +14,13 @@ var hashValue= {
   'ramen': 'There is a hot bowl of ramen where the toddler is trying to reach.',
   'potOfWater': 'The handle of the pot is sticking out.',
   'fork': 'There\'s a fork in the microwave, and this definitely shouldn\'t be there.',
-  'formula': 'You shouldn\'t give a toddler hot formula because it has hot spots.'
+  'formula': 'You shouldn\'t give a toddler hot formula because it has hot spots.',
+  'baby': 'There shouldn\'t be a baby in the kitchen.',
+  'toddler': 'There shouldn\'t be a toddler in the kitchen.',
+  'burner': 'The front burner is on.',
+  'kitchenAshTray': 'There\'s a lit cigarette in the ash tray.',
+  'kitchenLighter': 'There\'s a lighter in the reach of a child.',
+  'kitchenCoffee': 'There\'s a hot coffee that can be easily knocked off the counter.'
 }
 $(document).ready(function () {
   $('.goodClick').click(function(e){
