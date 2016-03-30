@@ -22,36 +22,63 @@
 <div class="container-fluid">
 	<img src="../KitchenImages/KitchenBackground.png" class="background-img">
 	 	<div class="container-fluid">
-	 		<img src="../images/KitchenImages/toddler.png" id="toddler">
-	 		<img src="../images/KitchenImages/crawlingBaby.png" id="baby">
-	 		<img src="../images/KitchenImages/backBurner.png" id="smallBurner" class="goodClick">
-	 		<img src="../images/KitchenImages/bowlOfRamen.png" id="ramen" class="goodClick">
-	 		<img src="../images/KitchenImages/potOfWater.png" id="potOfWater" class="goodClick">
-	 		<img src="../images/KitchenImages/fork.png" id="fork" class="goodClick">
-	 		<img src="../images/KitchenImages/formulaBottle.png" id="formula" class="goodClick">
-	 		<img src="../images/KitchenImages/adultCooking.png" id="adultCooking">
-			<img src="../images/KitchenImages/ovenMitt.png" id="ovenMitt" class="goodClick">
-			<img src="../images/KitchenImages/ramenBox1.png" id="ramenBox" class="goodClick">
-	 		<img src="..images/LivingRoomImages/ashTray.png" id="kitchenAshTray" class="goodClick">
-			<img src="..images/LivingRoomImages/coffee.png" id="kitchenCoffee" class="goodClick">
-			<img src="..images/LivingRoomImages/lighter.png" id="kitchenLighter" class="goodClick">
+	 		<div class="counter" id="kitchenCounter">
+	 			0
+	 		</div>
+	 		<div id="kitchenTimer">
+	 				<script>
+					//this is for the timer
+	function countdown( elementName, minutes, seconds )
+	{
+	    var element, endTime, hours, mins, msLeft, time, startTime;
+	    function twoDigits( n )
+	    {
+	        return (n <= 9 ? "0" + n : n);
+	    }
+
+	    function updateTimer()
+	    {
+
+	    	msLeft = (+new Date) - startTime + 500;
+	        //msLeft = endTime - (+new Date);
+	        //if ( msLeft < 1000 ) {
+	        //    alert('game over!');
+	        //} else {
+	            time = new Date( msLeft );
+	            mins = time.getUTCMinutes();
+	            //$("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+	            $("#kitchenTimer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
+	            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+	        //}
+	    }
+
+	    //element = document.getElementById( elementName );
+	    //alert('here: '+element);
+	    startTime = (+new Date);
+	    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+	    updateTimer();
+	}
+
+					 countdown( "kitchenTimer", 3, 30 );
+				 	</script>
+	 		</div>
+	 		<img src="../KitchenImages/toddler.png" id="toddler" class="goodClick">
+	 		<img src="../KitchenImages/crawlingBaby.png" id="baby" class="goodClick">
+	 		<img src="../KitchenImages/bowlOfRamen.png" id="ramen" class="goodClick">
+	 		<img src="../KitchenImages/potOfWater.png" id="potOfWater" class="goodClick">
+	 		<img src="../KitchenImages/fork.png" id="fork" class="goodClick">
+	 		<img src="../KitchenImages/formulaBottle.png" id="formula" class="goodClick">
+	 		<img src="../KitchenImages/adultCooking.png" id="adultCooking">
+			<img src="../KitchenImages/ovenMitt.png" id="ovenMitt" class="goodClick">
+			<img src="../KitchenImages/ramenBox1.png" id="ramenBox" class="goodClick">				
+	 		<img src="images/ashTray.png" id="kitchenAshTray" class="goodClick">
+			<img src="images/coffee.png" id="kitchenCoffee" class="goodClick">
+			<img src="images/lighter.png" id="kitchenLighter" class="goodClick">
+			<img src="../KitchenImages/frontBurner.png" id="burner" class="goodClick">
 			<a href="index.html"> <img src="images/back.png" id="back" class="back"> </a>
 
-
-<!-- 		<img src="images/ashTray.png" id="ashTray" class="goodClick">
-		<img src="images/brokenSmokeDetector.png" id="brokenSD" class="goodClick">
-		<img src="images/candle.png" id="candle" class="goodClick">
-		<img src="images/coffee.png" id="coffee" class="goodClick">
-		<img src="images/frayedTVWire.png" id="fray" class="goodClick">
-		<img src="images/lighter.png" id="lighter" class="goodClick">
-		<img src="images/matches.png" id="matches" class="goodClick">
-		<img src="images/outletCover.png" id="outletCover" class="goodClick">
-		<img src="images/powerStrip.png" id="powerStrip" class="goodClick">
-		<img src="images/spaceHeater.png" id="spaceHeater" class="goodClick">
-		<img src="images/workingSmokeDetector.png" id="workingSD" class="goodClick">
-		<img src="images/levelWin.png" id="levelWin" class="levelWin"> -->
-
-	</div> -->
+	</div>
+	
 </div>
 
 </body>
