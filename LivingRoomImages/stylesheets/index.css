@@ -27,9 +27,37 @@ h1 {
 	left:34%;
 }
 #timer {
-	opacity: 1;
+	position:fixed;
+	background-color: transparent;
+	width: 15%;
+	height: 9%;
+	left: 51%;
+	top: 26%;
+	font-size: 3.5vw;
+	color: rgb(12,185,61);
+	text-align: center;
+}
+#kitchenCounter {
+	position: fixed;
+	background-color: transparent;
+	width: 10%;
+	height: 5%;
+	left: 85%;
 	top: 40%;
-	left:5%;
+	font-size: 3vw;
+	color: rgb(12,185,61);
+	text-align: center;
+}
+#kitchenTimer {
+	position: fixed;
+	background-color: transparent;
+	width: 15%;
+	height: 9%;
+	left: 83%;
+	top: 45%;
+	font-size: 3.5vw;
+	color: rgb(12,185,61);
+	text-align: center;
 }
 #counter {
 	position: fixed;
