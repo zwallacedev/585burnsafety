@@ -19,11 +19,14 @@
 </head>
 
 <body>
+	<script>
+		setHazardsFound(12);
+	</script>
 <div class="container-fluid">
 	<img src="../KitchenImages/KitchenBackground.png" class="background-img">
 	 	<div class="container-fluid">
 	 		<div class="counter" id="kitchenCounter">
-	 			0
+	 			12
 	 		</div>
 	 		<div id="kitchenTimer">
 	 				<script>
@@ -41,6 +44,10 @@
 
 	    	//msLeft = (+new Date) - startTime + 500;
 	        msLeft = endTime - (+new Date);
+	        if($(".counter").html() <= 0){
+	    		checkScore(msLeft);
+	    		return;
+	    	}
 	        if ( msLeft < 0 ) {
 	            alert('game over!');
 	        } else {

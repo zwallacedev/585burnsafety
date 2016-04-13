@@ -1,4 +1,4 @@
-var hazardsFound = 0;
+var hazardsFound;
 var outletFixed = false;
 var ovenMittOn = false;
 var hashValue= {
@@ -34,7 +34,7 @@ $(document).ready(function () {
     if(this.id == "outletCover"){
       if(!outletFixed){
         $("#outletCover").css('opacity', '1');
-        incrementCnt();
+        decrementCnt();
         outletFixed = true;
       }
       return;
@@ -43,7 +43,7 @@ $(document).ready(function () {
     if(this.id == "ovenMitt"){
       if(!ovenMittOn){
         $("#ovenMitt").css('opacity', '1');
-        incrementCnt();
+        decrementCnt();
         ovenMittOn = true;
         alert(hashValue[this.id.toString()]);
       }
@@ -53,7 +53,7 @@ $(document).ready(function () {
     if(this.id == "brokenSD"){
       $("#workingSD").css('visibility', 'visible');
     }
-    incrementCnt();
+    decrementCnt();
     alert(hashValue[this.id.toString()]);
   });
 
@@ -64,13 +64,21 @@ $(document).ready(function () {
 
 
 });
-
-var incrementCnt = function(){
-  hazardsFound++;
+var setHazardsFound = function(hazards){
+  alert(hazards);
+  hazardsFound = hazards;
+}
+var decrementCnt = function(){
+  hazardsFound--;
   $(".counter").html(hazardsFound);
-  if(hazardsFound==10){
+  if(hazardsFound<=0){
     $("#levelWin").css('visibility', 'visible');
+
   }
+}
+var checkScore = function(msLeft){
+  var secondsLeft = Math.round(msLeft/1000);
+  alert('You had a score of '+secondsLeft);
 }
 //this is for the timer
 function countdown( elementName, minutes, seconds )

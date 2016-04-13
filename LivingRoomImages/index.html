@@ -19,15 +19,19 @@
 </head>
 
 <body>
+	<script>
+		setHazardsFound(10);
+	</script>
 <div class="container-fluid">
 	<img src="images/background2.png" class="background-img">
 	<div class="container-fluid">
 		<div class="counter" id="counter">
-			0
+			10
 		</div>
 		<div id="timer">
 				<script>
 	//this is for the timer
+	var gameOver = false;
 	function countdown( elementName, minutes, seconds )
 	{
 	    var element, endTime, hours, mins, msLeft, time, startTime;
@@ -43,14 +47,20 @@
 
 	    	//msLeft = (+new Date) - startTime;
 	        msLeft = endTime - (+new Date);
+	    	if($(".counter").html() <= 0){
+	    		checkScore(msLeft);
+	    		return;
+	    	}
 	        if ( msLeft <= 0 ) {
 	            alert('game over!');
-	        } else {
+	        } else if(!gameOver){
 	            time = new Date( msLeft );
 	            mins = time.getUTCMinutes();
 	           //$("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
 	            $("#timer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
 	            setTimeout( updateTimer, time.getUTCMilliseconds() - 500);
+	        }else{
+	        	return;
 	        }
 	    }
 
