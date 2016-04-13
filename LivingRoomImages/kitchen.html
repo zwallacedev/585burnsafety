@@ -49,7 +49,8 @@
 	    		return;
 	    	}
 	        if ( msLeft < 0 ) {
-	            alert('game over!');
+	            checkScore(msLeft);
+	            //alert('game over!');
 	        } else {
 	            time = new Date( msLeft );
 	            mins = time.getUTCMinutes();

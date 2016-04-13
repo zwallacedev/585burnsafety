@@ -1,6 +1,7 @@
 var hazardsFound;
 var outletFixed = false;
 var ovenMittOn = false;
+var score = 0;
 var hashValue= {
   'ashTray': 'There\'s a lit cigarette in the ash tray.',
   'brokenSD': 'The Smoke detector should be working.',
@@ -65,11 +66,11 @@ $(document).ready(function () {
 
 });
 var setHazardsFound = function(hazards){
-  alert(hazards);
   hazardsFound = hazards;
 }
 var decrementCnt = function(){
   hazardsFound--;
+  score += 10;
   $(".counter").html(hazardsFound);
   if(hazardsFound<=0){
     $("#levelWin").css('visibility', 'visible');
@@ -77,8 +78,9 @@ var decrementCnt = function(){
   }
 }
 var checkScore = function(msLeft){
-  var secondsLeft = Math.round(msLeft/1000);
-  alert('You had a score of '+secondsLeft);
+  score += Math.round(msLeft/1000);
+  score = Math.round(Math.pow(score, 1.2));
+  alert('You had a score of '+score);
 }
 //this is for the timer
 function countdown( elementName, minutes, seconds )
