@@ -232,3 +232,11 @@ h1 {
 	width:7%;
 	height:5%;
 }
+
+#back {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 5%;
+	height: 11%;
+}

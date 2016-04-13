@@ -72,18 +72,3 @@
   height: 22%;
   width: 12%;
 }
-
-#one {
-  background-color: blue;
-  top: 50%
-}
-
-#two {
-  background-color: red;
-  left: 50%;
-}
-
-#three {
-  background-color: green;
-
-}
