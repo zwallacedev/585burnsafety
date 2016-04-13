@@ -19,57 +19,16 @@
 </head>
 
 <body>
-	<script>
-		setHazardsFound(12);
-	</script>
+	<!-- this is what I'm using to determine how many hazards we need. -->
+<div id="level" name="kitchenone"></div>
+
 <div class="container-fluid">
 	<img src="../KitchenImages/KitchenBackground.png" class="background-img">
 	 	<div class="container-fluid">
 	 		<div class="counter" id="kitchenCounter">
 	 			12
 	 		</div>
-	 		<div id="kitchenTimer">
-	 				<script>
-					//this is for the timer
-	function countdown( elementName, minutes, seconds )
-	{
-	    var element, endTime, hours, mins, msLeft, time, startTime;
-	    function twoDigits( n )
-	    {
-	        return (n <= 9 ? "0" + n : n);
-	    }
-
-	    function updateTimer()
-	    {
-
-	    	//msLeft = (+new Date) - startTime + 500;
-	        msLeft = endTime - (+new Date);
-	        if($(".counter").html() <= 0){
-	    		checkScore(msLeft);
-	    		return;
-	    	}
-	        if ( msLeft < 0 ) {
-	            checkScore(msLeft);
-	            //alert('game over!');
-	        } else {
-	            time = new Date( msLeft );
-	            mins = time.getUTCMinutes();
-	            //$("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-	            $("#kitchenTimer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
-	            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-	        }
-	    }
-
-	    //element = document.getElementById( elementName );
-	    //alert('here: '+element);
-	    //startTime = (+new Date);
-	    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-	    updateTimer();
-	}
-
-					 countdown( "kitchenTimer", 3, 30 );
-				 	</script>
-	 		</div>
+	 		<div id="kitchenTimer" class="timer"></div>
 	 		<img src="../KitchenImages/toddler.png" id="toddler" class="goodClick">
 	 		<img src="../KitchenImages/crawlingBaby.png" id="baby" class="goodClick">
 	 		<img src="../KitchenImages/bowlOfRamen.png" id="ramen" class="goodClick">

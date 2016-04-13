@@ -19,60 +19,16 @@
 </head>
 
 <body>
-	<script>
-		setHazardsFound(10);
-	</script>
+<!-- this is what I'm using to determine how many hazards we need. -->
+<div id="level" name="livingroomone"></div>
 <div class="container-fluid">
 	<img src="images/background2.png" class="background-img">
 	<div class="container-fluid">
 		<div class="counter" id="counter">
 			10
 		</div>
-		<div id="timer">
-				<script>
-	//this is for the timer
-	var gameOver = false;
-	function countdown( elementName, minutes, seconds )
-	{
-	    var element, endTime, hours, mins, msLeft, time, startTime;
-	    //startTime = (+new Date);
+		<div id="timer" class="timer">
 
-	    function twoDigits( n )
-	    {
-	        return (n <= 9 ? "0" + n : n);
-	    }
-
-	    function updateTimer()
-	    {
-
-	    	//msLeft = (+new Date) - startTime;
-	        msLeft = endTime - (+new Date);
-	    	if($(".counter").html() <= 0){
-	    		checkScore(msLeft);
-	    		return;
-	    	}
-	        if ( msLeft <= 0 ) {
-	        	checkScore(msLeft);
-	            //alert('game over!');
-	        } else if(!gameOver){
-	            time = new Date( msLeft );
-	            mins = time.getUTCMinutes();
-	           //$("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-	            $("#timer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
-	            setTimeout( updateTimer, time.getUTCMilliseconds() - 500);
-	        }else{
-	        	return;
-	        }
-	    }
-
-	    //element = document.getElementById( elementName );
-	    //alert('here: '+element);
-	    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-	    updateTimer();
-	}
-
-	 countdown( "timer", 3, 30 );
-		</script>
 		</div>
 		<img src="images/ashTray.png" id="ashTray" class="goodClick">
 		<img src="images/brokenSmokeDetector.png" id="brokenSD" class="goodClick">

@@ -57,31 +57,16 @@ $(document).ready(function () {
     decrementCnt();
     alert(hashValue[this.id.toString()]);
   });
+  if($('#level').attr('name')=='livingroomone'){
+    hazardsFound = 10;
+  }else if($('#level').attr('name') == 'kitchenone'){
+    hazardsFound = 12;
+  }
 
   $('.container-fluid').click(function(e){
     e.stopPropagation();
     console.log("Nooooo. A hazard was NOT clicked!");
   });
-
-
-});
-var setHazardsFound = function(hazards){
-  hazardsFound = hazards;
-}
-var decrementCnt = function(){
-  hazardsFound--;
-  score += 10;
-  $(".counter").html(hazardsFound);
-  if(hazardsFound<=0){
-    $("#levelWin").css('visibility', 'visible');
-
-  }
-}
-var checkScore = function(msLeft){
-  score += Math.round(msLeft/1000);
-  score = Math.round(Math.pow(score, 1.2));
-  alert('You had a score of '+score);
-}
 //this is for the timer
 function countdown( elementName, minutes, seconds )
 {
@@ -94,14 +79,19 @@ function countdown( elementName, minutes, seconds )
     function updateTimer()
     {
         msLeft = endTime - (+new Date);
+        if($(".counter").html() <= 0){
+          checkScore(msLeft);
+          return;
+        }
         if ( msLeft < 1000 ) {
-            alert('game over!');
+            checkScore(msLeft);
+            //alert('game over!');
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
             mins = time.getUTCMinutes();
             //$("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-            $("#timer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
+            $(".timer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         }
     }
@@ -112,3 +102,23 @@ function countdown( elementName, minutes, seconds )
     updateTimer();
 }
 
+var decrementCnt = function(){
+  hazardsFound--;
+  score += 10;
+  $(".counter").html(hazardsFound);
+  if(hazardsFound<=0){
+    $("#levelWin").css('visibility', 'visible');
+  }
+}
+var checkScore = function(msLeft){
+  if(score <= 0 & msLeft <= 0){
+    alert('Game over.');
+    return;
+  }
+  score = Math.round(Math.pow(score, 1.2));
+  score += Math.round(msLeft/1000);
+  alert('You had a score of '+score);
+}
+    countdown( "timer", 3, 30 );
+
+});
