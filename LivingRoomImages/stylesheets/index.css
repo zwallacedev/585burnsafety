@@ -278,7 +278,7 @@ h1 {
 }
 #garageBaby {
 	position: fixed;
-	left:33%;
+	left:28%;
 	top:86%;
 	width:8%;
 	height:15%;
@@ -307,14 +307,14 @@ h1 {
 #gasCan {
 	position:fixed;
 	left:82%;
-	top:83%;
+	top:42%;
 	width:3.2%;
 	height:9%;
 }
 #hotExhaust {
 	position:fixed;
-	left:41.37%;
-	top:87.5%;
+	left:39.2%;
+	top:88.4%;
 	width:3.5%;
 	height:3%;
 }
@@ -325,4 +325,10 @@ h1 {
 	width:4%;
 	height:10%;
 }
-
+#motorcycle {
+	position:fixed;
+	left:57%;
+	top:74%;
+	width:13%;
+	height:25%;
+}
