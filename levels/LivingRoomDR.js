@@ -4,18 +4,15 @@ var np1Stop = false;
 var np2Stop = false;
 var sillyStop = false;
 var isDown = false;
-var aerosolTry = 0;
-var towelTry = 0;
-var np1Try = 0;
-var np2Try = 0;
+var workingSDTry = 0;
+var matchesTry = 0;
+var lighterTry = 0;
+var outletCoverTry = 0;
 var sillyTry = 0;
 var origOffset;
 
 $(document).ready(function () {
   $(".drag").draggable();
-  $('.drag').each(function(){
-    $(this).css({'top' : getRandomInt(20,70)+'%', 'left' : getRandomInt(20,70)+'%'});
-  });
 
   $(".drag").hover(function( event ) {
     if(!isDown){
@@ -34,7 +31,7 @@ $(document).ready(function () {
   $(".drag").mouseup(function( event ) {
     $("#"+event.target.id).width(thisWidth);
     $("#"+event.target.id).height(thisHeight);
-    $(".helper").hide();
+    $(".helper").css('opacity', '0');;
     isDown = false;
 
     //var pageCoords = "( " + event.pageX + ", " + event.pageY + " )";
@@ -46,52 +43,33 @@ $(document).ready(function () {
     var objectCenterX = objectOffset.left + (objectWidth/2);
     var objectCenterY = objectOffset.top + (objectHeight/2);
 
-    if(aerosolStop && (event.target.id != "aerosol")){
-      alert("please move aerosol");
-      $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
-      return;
-    }else if(towelStop && (event.target.id != "beachTowel")){
-      alert("please move beach towel");
-      $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
-      return;
-    }else if(np1Stop && (event.target.id != "np1")){
-      alert("please move nail polish 1");
-      $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
-      return;
-    }else if(np2Stop && (event.target.id != "np2")){
-      alert("please move nail polish 2");
-      $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
-      return;
-    }else if(sillyStop && (event.target.id != "sillyString")){
-      alert("please move nail silly string");
-      $("#"+event.target.id).animate({ top: origOffset.top, left: origOffset.left });
-      return;
-    }
-
-
     //flame specs
-    var flameOffset = $("#flame").offset();
-    var flameHeight = $("#flame").height();
-    var flameWidth = $("#flame").width();
+    var spotName = event.target.id+"Spot";
+    var flameOffset = $("#"+spotName).offset();
+    var flameHeight = $("#"+spotName).height();
+    var flameWidth = $("#"+spotName).width();
     var flameCenterX = flameOffset.left + (flameWidth/2);
     var flameCenterY = flameOffset.top + (flameHeight/2);
 
     var dist = Math.sqrt( (Math.pow(flameCenterX - objectCenterX,2)) + (Math.pow(flameCenterY - objectCenterY,2)) )
 
-    if(dist < 150){
-      alert(event.target.id + " is too close to the heater.  Please move it away.");
+    if(dist < 50){
+      alert("You correctly placed " + event.target.id);
       switch(event.target.id){
-        case "aerosol":
-          aerosolStop = true;
+        case "workingSD":
+          $('#workingSD').hide();
+          $('#brokenSD').hide();
+          $('#workingSDFirm').toggle();
           break;
-        case "beachTowel":
-          towelStop = true;
+        case "matches":
+          $('#matches').hide();
           break;
-        case "np1":
-          np1Stop = true;
+        case "lighter":
+          $('#lighter').hide();
           break;
-        case "np2":
-          np2Stop = true;
+        case "outletCover":
+          $('#outletCover').hide();
+          $('#outletCoverFirm').toggle();
           break;
         case "sillyString":
           sillyStop = true;
@@ -112,28 +90,28 @@ $(document).ready(function () {
     isDown = true;
     origOffset = $("#"+event.target.id).offset();
     switch(event.target.id){
-      case "aerosol":
-        aerosolTry++;
-        if(aerosolTry > 3){
-          $("#shelf1").toggle();
+      case "workingSD":
+        workingSDTry++;
+        if(workingSDTry > 3){
+          $("#workingSDSpot").css('opacity', '1');
         }
         break;
-      case "beachTowel":
-        towelTry++;
-        if(towelTry > 3){
-          $("#shelf2").toggle();
+      case "matches":
+        matchesTry++;
+        if(matchesTry > 3){
+          $("#matchesSpot").css('opacity', '1');
         }
         break;
-      case "np1":
-        np1Try++;
-        if(np1Try > 3){
-          $("#shelf3").toggle();
+      case "lighter":
+        lighterTry++;
+        if(lighterTry > 3){
+          $("#lighterSpot").css('opacity', '1');
         }
         break;
-      case "np2":
-        np2Try++;
-        if(np2Try > 3){
-          $("#shelf3").toggle();
+      case "outletCover":
+        outletCoverTry++;
+        if(outletCoverTry > 3){
+          $("#outletCoverSpot").css('opacity', '1');
         }
         break;
       case "sillyString":
@@ -148,7 +126,3 @@ $(document).ready(function () {
   });
 
 });
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}

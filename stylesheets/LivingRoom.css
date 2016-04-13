@@ -10,55 +10,18 @@ h1 {
 	top: 0;
 	left: 0;
 }
+
 .middle-of-page {
 	position: fixed;
 	left:45%;
 	top:50%;
 }
+
 .background-img {
     height: 100%;
     width: 100%;
 }
-#burner {
-	position: fixed;
-	height:2%;
-	width:5%;
-	top:59%;
-	left:34%;
-}
-#timer {
-	position:fixed;
-	background-color: transparent;
-	width: 15%;
-	height: 9%;
-	left: 51%;
-	top: 26%;
-	font-size: 3.5vw;
-	color: rgb(12,185,61);
-	text-align: center;
-}
-#kitchenCounter {
-	position: fixed;
-	background-color: transparent;
-	width: 10%;
-	height: 5%;
-	left: 85%;
-	top: 40%;
-	font-size: 3vw;
-	color: rgb(12,185,61);
-	text-align: center;
-}
-#kitchenTimer {
-	position: fixed;
-	background-color: transparent;
-	width: 15%;
-	height: 9%;
-	left: 83%;
-	top: 45%;
-	font-size: 3.5vw;
-	color: rgb(12,185,61);
-	text-align: center;
-}
+
 #counter {
 	position: fixed;
 	background-color: transparent;
@@ -109,6 +72,7 @@ h1 {
 	height: 12%;
 	width: 6%;
 }
+
 #kitchenCoffee {
 	position: fixed;
 	left: 7%;
@@ -269,101 +233,10 @@ h1 {
 	height:5%;
 }
 
-#bbqLighter {
-	position:fixed;
-	left:85%;
-	top:94%;
-	width:5%;
-	height:5%;
-}
-#garageBaby {
+#back {
 	position: fixed;
-	left:28%;
-	top:86%;
-	width:8%;
-	height:15%;
-}
-#milkJug {
-	position:fixed;
-	left:75%;
-	top:89%;
-	width:3.4%;
-	height:10%;
-}
-#boxes {
-	position:fixed;
-	left:61%;
-	top:58.5%;
-	width:16%;
-	height:25%;
-}
-#fertilizer {
-	position:fixed;
-	left:16%;
-	top:85%;
-	width:9%;
-	height:7.5%;
-}
-#gasCan {
-	position:fixed;
-	left:82%;
-	top:42%;
-	width:3.2%;
-	height:9%;
-}
-#hotExhaust {
-	position:fixed;
-	left:39.2%;
-	top:88.4%;
-	width:3.5%;
-	height:3%;
-}
-#extCord {
-	position:fixed;
-	left:23.4%;
-	top:74.2%;
-	width:4%;
-	height:10%;
-}
-#motorcycle {
-	position:fixed;
-	left:57%;
-	top:74%;
-	width:13%;
-	height:25%;
-}
-
-#kitchenlevelbutton {
-	position: fixed;
-	top:66%;
-	left: 44%;
-	height:5%;
-	width:15%;
-	opacity:0;
-}
-
-#garagelevelbutton {
-	position: fixed;
-	top: 32%;
-	left: 74%;
-	height:5%;
-	width:15%;
-	opacity:0;
-}
-
-#livingroomlevelbutton {
-	position: fixed;
-	top:31%;
-	left: 44%;
-	height:5%;
-	width:15%;
-	opacity:0;
-}
-
-#back{
-	position: fixed;
-	left:0%;
+	left: 0%;
 	top: 0%;
-	width: 6%;
-	height: 12%;
+	width: 5%;
+	height: 11%;
 }
