@@ -27,6 +27,15 @@ var hashValue= {
   'ovenMitt': 'You should wear an ovenmitt when pulling something out of the oven.'
 }
 $(document).ready(function () {
+
+    var livingRoomOneScore = parseInt(localStorage.getItem('lvonescore'));
+    var kitchenOneScore = parseInt(localStorage.getItem('konescore'));
+    if(livingRoomOneScore != null){
+      score = score + livingRoomOneScore;
+    }
+    if(kitchenOneScore != null){
+      score+=kitchenOneScore;
+    }
   $('.goodClick').click(function(e){
     e.stopPropagation();
     if(this.id == "workingSD"){
@@ -60,7 +69,10 @@ $(document).ready(function () {
   if($('#level').attr('name')=='livingroomone'){
     hazardsFound = 10;
   }else if($('#level').attr('name') == 'kitchenone'){
-    hazardsFound = 12;
+    hazardsFound = 11;
+  }else if($('#level').attr('name') == 'menu'){
+    $('#totalScore').html('Score: '+score);
+    return;
   }
 
   $('.container-fluid').click(function(e){
@@ -118,6 +130,12 @@ var checkScore = function(msLeft){
   score = Math.round(Math.pow(score, 1.2));
   score += Math.round(msLeft/1000);
   alert('You had a score of '+score);
+  if($('#level').attr('name')=='livingroomone'){
+    localStorage.setItem("lvonescore", score);
+  }else if($('#level').attr('name') == 'kitchenone'){
+    localStorage.setItem("konescore", score);
+  }
+
 }
     countdown( "timer", 3, 30 );
 
