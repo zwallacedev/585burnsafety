@@ -195,10 +195,10 @@ h1 {
 
 #ramen {
 	position: fixed;
-	left: 25%;
-	top: 46%;
-	width: 5%;
-	height: 15%;
+	left: 43%;
+	top: 21.4%;
+	width: 4%;
+	height: 12%;
 }
 
 #potOfWater {
@@ -226,13 +226,14 @@ h1 {
 	position: fixed;
 	left:38%;
 	top:79%;
-	width:12%;
+	width:8%;
 	height:21%;
 }
+
 #formula {
 	position: fixed;
-	left:49%;
-	top:84%;
+	left:51%;
+	top:47%;
 	width:3%;
 	height:14%;
 }
