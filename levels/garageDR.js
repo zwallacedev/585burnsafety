@@ -1,17 +1,9 @@
-var aerosolStop = false;
-var towelStop = false;
-var np1Stop = false;
-var np2Stop = false;
-var sillyStop = false;
 var isDown = false;
-var ramenTry = 0;
-var potOfWaterTry = 0;
-var forkTry = 0;
-var formulaTry = 0;
-var ovenMittTry = 0;
-var ramenBoxTry = 0;
-var kitchenCoffeeTry = 0;
-var kitchenLighterTry = 0;
+var bbqLighterTry = 0;
+var garageBabyTry = 0;
+var gasCanTry = 0;
+var extCordTry = 0;
+var fertilizerTry = 0;
 var origOffset;
 
 $(document).ready(function () {
@@ -48,7 +40,6 @@ $(document).ready(function () {
 
     //flame specs
     var spotName = event.target.id+"Spot";
-    console.log(spotName);
     var flameOffset = $("#"+spotName).offset();
     var flameHeight = $("#"+spotName).height();
     var flameWidth = $("#"+spotName).width();
@@ -56,48 +47,34 @@ $(document).ready(function () {
     var flameCenterY = flameOffset.top + (flameHeight/2);
 
     var dist = Math.sqrt( (Math.pow(flameCenterX - objectCenterX,2)) + (Math.pow(flameCenterY - objectCenterY,2)) )
-    console.log(dist);
 
     if(dist < 75){
-      alert("You correctly placed " + event.target.id);
       switch(event.target.id){
-        case "ramen":
-          $('#ramen').hide();
-          $('#ramenFirm').toggle();
+        case "bbqLighter":
+          alert("You correctly placed the barbeque lighter on the shelf!");
+          $('#bbqLighter').hide();
+          $('#bbqLighterFirm').toggle();
           break;
-        case "potOfWater":
-          $('#potOfWater').hide();
-          $('#potOfWaterFirm').toggle();
+        case "garageBaby":
+          alert("Kids shouldn't play in the garage!");
+          $('#garageBaby').hide();
           break;
-        case "fork":
-          $('#fork').hide();
+        case "gasCan":
+          alert("Keep gas cans on the floor!");
+          $('#gasCan').hide();
+          $('#gasCanFirm').toggle();
           break;
-        case "formula":
-          $('#formula').hide();
+        case "extCord":
+          alert("Open extension cords are dangerous!  Tell a parent if you see one!");
+          $('#extCord').hide();
           break;
-        case "ovenMitt":
-          $('#ovenMitt').hide();
-          $('#ovenMittFirm').toggle();
-          break;
-        case "ramenBox":
-          $('#ramenBox').hide();
-          break;
-        case "kitchenCoffee":
-          $('#kitchenCoffee').hide();
-          $('#kitchenCoffeeFirm').toggle();
-          break;
-        case "kitchenLighter":
-          $('#kitchenLighter').hide();
+        case "fertilizer":
+          alert("Open fertilizer shouldn't be in the garage!");
+          $('#fertilizer').hide();
           break;
         default:
           break;
       }
-    }else{
-      aerosolStop = false;
-      towelStop = false;
-      np1Stop = false;
-      np2Stop = false;
-      sillyStop = false;
     }
   });
 
@@ -105,52 +82,34 @@ $(document).ready(function () {
     isDown = true;
     origOffset = $("#"+event.target.id).offset();
     switch(event.target.id){
-      case "ramen":
-        ramenTry++;
-        if(ramenTry > 3){
-          $("#ramenSpot").css('opacity', '1');
+      case "bbqLighter":
+        bbqLighterTry++;
+        if(bbqLighterTry > 3){
+          $("#bbqLighterSpot").css('opacity', '1');
         }
         break;
-      case "potOfWater":
-        potOfWaterTry++;
-        if(potOfWaterTry > 3){
-          $("#potOfWaterSpot").css('opacity', '1');
+      case "garageBaby":
+        garageBabyTry++;
+        if(garageBabyTry > 3){
+          $("#garageBabySpot").css('opacity', '1');
         }
         break;
-      case "fork":
-        forkTry++;
-        if(forkTry > 3){
-          $("#forkSpot").css('opacity', '1');
+      case "gasCan":
+        gasCanTry++;
+        if(gasCanTry > 3){
+          $("#gasCanSpot").css('opacity', '1');
         }
         break;
-      case "formula":
-        formulaTry++;
-        if(formulaTry > 3){
-          $("#formulaSpot").css('opacity', '1');
+      case "extCord":
+        extCordTry++;
+        if(extCordTry > 3){
+          $("#extCordSpot").css('opacity', '1');
         }
         break;
-      case "ovenMitt":
-        ovenMittTry++;
-        if(ovenMittTry > 3){
-          $("#ovenMittSpot").css('opacity', '1');
-        }
-        break;
-      case "ramenBox":
-        ramenBoxTry++;
-        if(ramenBoxTry > 3){
-          $("#ramenBoxSpot").css('opacity', '1');
-        }
-        break;
-      case "kitchenCoffee":
-        kitchenCoffeeTry++;
-        if(kitchenCoffeeTry > 3){
-          $("#kitchenCoffeeSpot").css('opacity', '1');
-        }
-        break;
-      case "kitchenLighter":
-        kitchenLighterTry++;
-        if(kitchenLighterTry > 3){
-          $("#kitchenLighterSpot").css('opacity', '1');
+      case "fertilizer":
+        fertilizerTry++;
+        if(fertilizerTry > 3){
+          $("#fertilizerSpot").css('opacity', '1');
         }
         break;
       default:
