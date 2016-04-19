@@ -1,0 +1,222 @@
+.container-fluid {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.background-img {
+    height: 100%;
+    width: 100%;
+}
+
+.helper {
+  position: fixed;
+	opacity: 0;
+  border: 5px solid yellow;
+}
+
+#ovenMittSpot {
+  width: 5%;
+  height: 9%;
+  top: 57%;
+  left: 66%;
+}
+
+#ramenSpot {
+  width: 9%;
+  height: 11%;
+  top: 52%;
+  left: 45%;
+}
+
+#potOfWaterSpot {
+  width: 7%;
+  height: 9%;
+  top: 51%;
+  left: 33%;
+}
+
+#forkSpot {
+  width: 24%;
+  height: 25%;
+  top: 66%;
+  left: 7%;
+}
+
+#formulaSpot {
+  width: 24%;
+  height: 25%;
+  top: 12%;
+  left: 10%;
+}
+
+#workingSDSpot {
+	width: 10%;
+	height: 16%;
+	top: 2%;
+	left: 79%;
+}
+
+#lighterSpot {
+	width: 10%;
+	height: 8%;
+	top: 68%;
+	left: 83%;
+}
+
+#outletCoverSpot {
+	width: 4%;
+	height: 11%;
+	top: 64%;
+	left: 3%;
+}
+
+#toddler {
+	position: fixed;
+	left:14%;
+	top:62%;
+	width:12.5%;
+	height:38%;
+}
+
+#baby {
+	position: fixed;
+	left:38%;
+	top:79%;
+	width:12%;
+	height:21%;
+}
+
+#ramen {
+	position: fixed;
+	left: 25%;
+	top: 46%;
+	width: 5%;
+	height: 15%;
+}
+
+#potOfWater {
+	position:fixed;
+	left:40.5%;
+	top:49.8%;
+	width:4.5%;
+	height:13%;
+}
+
+#fork {
+	position:fixed;
+	left:40.5%;
+	top:31.3%;
+	width:8%;
+	height:3%;
+}
+
+#formula {
+	position: fixed;
+	left:49%;
+	top:84%;
+	width:3%;
+	height:14%;
+}
+
+#adultCooking{
+	position: fixed;
+	left:54%;
+	top: 29%;
+	width: 22%;
+	height: 70%;
+}
+
+#ovenMitt{
+	position: fixed;
+  left: 48.7%;
+  top: 53.8%;
+	width: 4%;
+	height: 7.3%;
+}
+
+#kitchenAshTray {
+	position: fixed;
+	left: 14%;
+	top: 54%;
+	height: 8%;
+	width: 4%;
+}
+
+#ramenBox {
+	position:fixed;
+	left:41.5%;
+	top:13.8%;
+	width:7%;
+	height:5%;
+}
+
+#kitchenCoffee {
+	position: fixed;
+	left: 7%;
+	top: 52%;
+	height: 10%;
+	width: 5%;
+}
+
+#kitchenLighter {
+	position: fixed;
+	left: 25%;
+	top: 92%;
+	width: 7%;
+	height: 8%;
+}
+
+#burner {
+	position: fixed;
+	height:2%;
+	width:5%;
+	top:59%;
+	left:34%;
+}
+
+#ovenMittFirm {
+	position: fixed;
+	display: none;
+  left: 65.7%;
+	top: 57.8%;
+	width: 4%;
+	height: 7.3%;
+}
+
+#ramenFirm {
+	position: fixed;
+	display: none;
+  left: 46.7%;
+  top: 44.8%;
+  width: 5%;
+  height: 15%;
+}
+
+#potOfWaterFirm {
+	position: fixed;
+	display: none;
+  left: 34.7%;
+  top: 46.8%;
+  width: 4.5%;
+  height: 13%;
+}
+
+#levelWin {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+
+#back {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 5%;
+	height: 11%;
+}
