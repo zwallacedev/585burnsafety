@@ -1,8 +1,3 @@
-var aerosolStop = false;
-var towelStop = false;
-var np1Stop = false;
-var np2Stop = false;
-var sillyStop = false;
 var isDown = false;
 var workingSDTry = 0;
 var matchesTry = 0;
@@ -54,35 +49,29 @@ $(document).ready(function () {
     var dist = Math.sqrt( (Math.pow(flameCenterX - objectCenterX,2)) + (Math.pow(flameCenterY - objectCenterY,2)) )
 
     if(dist < 50){
-      alert("You correctly placed " + event.target.id);
       switch(event.target.id){
         case "workingSD":
+          alert("Smoke detectors should be working at all times!  Tell a parent if you see a broken one!");
           $('#workingSD').hide();
           $('#brokenSD').hide();
           $('#workingSDFirm').toggle();
           break;
         case "matches":
+          alert("Don't play with matches!  Put them somewhere safe if you see them!");
           $('#matches').hide();
           break;
         case "lighter":
+          alert("Don't play with lighters!  Put them somewhere safe if you see them!");
           $('#lighter').hide();
           break;
         case "outletCover":
+          alert("Outlets should be covered at all times!  Tell a parent if you see one open!");
           $('#outletCover').hide();
           $('#outletCoverFirm').toggle();
-          break;
-        case "sillyString":
-          sillyStop = true;
           break;
         default:
           break;
       }
-    }else{
-      aerosolStop = false;
-      towelStop = false;
-      np1Stop = false;
-      np2Stop = false;
-      sillyStop = false;
     }
   });
 
