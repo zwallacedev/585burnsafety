@@ -9,10 +9,9 @@ var potOfWaterTry = 0;
 var forkTry = 0;
 var formulaTry = 0;
 var ovenMittTry = 0;
-var matchesTry = 0;
-var lighterTry = 0;
-var outletCoverTry = 0;
-var sillyTry = 0;
+var ramenBoxTry = 0;
+var kitchenCoffeeTry = 0;
+var kitchenLighterTry = 0;
 var origOffset;
 
 $(document).ready(function () {
@@ -80,18 +79,15 @@ $(document).ready(function () {
           $('#ovenMitt').hide();
           $('#ovenMittFirm').toggle();
           break;
-        case "matches":
-          $('#matches').hide();
+        case "ramenBox":
+          $('#ramenBox').hide();
           break;
-        case "lighter":
-          $('#lighter').hide();
+        case "kitchenCoffee":
+          $('#kitchenCoffee').hide();
+          $('#kitchenCoffeeFirm').toggle();
           break;
-        case "outletCover":
-          $('#outletCover').hide();
-          $('#outletCoverFirm').toggle();
-          break;
-        case "sillyString":
-          sillyStop = true;
+        case "kitchenLighter":
+          $('#kitchenLighter').hide();
           break;
         default:
           break;
@@ -139,28 +135,22 @@ $(document).ready(function () {
           $("#ovenMittSpot").css('opacity', '1');
         }
         break;
-      case "matches":
-        matchesTry++;
-        if(matchesTry > 3){
-          $("#matchesSpot").css('opacity', '1');
+      case "ramenBox":
+        ramenBoxTry++;
+        if(ramenBoxTry > 3){
+          $("#ramenBoxSpot").css('opacity', '1');
         }
         break;
-      case "lighter":
-        lighterTry++;
-        if(lighterTry > 3){
-          $("#lighterSpot").css('opacity', '1');
+      case "kitchenCoffee":
+        kitchenCoffeeTry++;
+        if(kitchenCoffeeTry > 3){
+          $("#kitchenCoffeeSpot").css('opacity', '1');
         }
         break;
-      case "outletCover":
-        outletCoverTry++;
-        if(outletCoverTry > 3){
-          $("#outletCoverSpot").css('opacity', '1');
-        }
-        break;
-      case "sillyString":
-        sillyTry++;
-        if(sillyTry > 3){
-          $("#shelf4").toggle();
+      case "kitchenLighter":
+        kitchenLighterTry++;
+        if(kitchenLighterTry > 3){
+          $("#kitchenLighterSpot").css('opacity', '1');
         }
         break;
       default:
