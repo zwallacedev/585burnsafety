@@ -1,8 +1,3 @@
-var aerosolStop = false;
-var towelStop = false;
-var np1Stop = false;
-var np2Stop = false;
-var sillyStop = false;
 var isDown = false;
 var ramenTry = 0;
 var potOfWaterTry = 0;
@@ -48,7 +43,6 @@ $(document).ready(function () {
 
     //flame specs
     var spotName = event.target.id+"Spot";
-    console.log(spotName);
     var flameOffset = $("#"+spotName).offset();
     var flameHeight = $("#"+spotName).height();
     var flameWidth = $("#"+spotName).width();
@@ -56,48 +50,48 @@ $(document).ready(function () {
     var flameCenterY = flameOffset.top + (flameHeight/2);
 
     var dist = Math.sqrt( (Math.pow(flameCenterX - objectCenterX,2)) + (Math.pow(flameCenterY - objectCenterY,2)) )
-    console.log(dist);
 
     if(dist < 75){
-      alert("You correctly placed " + event.target.id);
       switch(event.target.id){
         case "ramen":
+          alert("Ask a parent to reach something for you!");
           $('#ramen').hide();
           $('#ramenFirm').toggle();
           break;
         case "potOfWater":
+          alert("Keep hot pots of away from the edge of the counter!");
           $('#potOfWater').hide();
           $('#potOfWaterFirm').toggle();
           break;
         case "fork":
+          alert("Keep forks in their correct place - the drawer!");
           $('#fork').hide();
           break;
         case "formula":
+          alert("Don't touch or drink anything thats smoking!");
           $('#formula').hide();
           break;
         case "ovenMitt":
+          alert("Use an oven mit when handling hot things in the kitchen!");
           $('#ovenMitt').hide();
           $('#ovenMittFirm').toggle();
           break;
         case "ramenBox":
+          alert("Food doesn't belong on top of the microwave!");
           $('#ramenBox').hide();
           break;
         case "kitchenCoffee":
+          alert("Hot drinks don't belong on the edge of the counter!");
           $('#kitchenCoffee').hide();
           $('#kitchenCoffeeFirm').toggle();
           break;
         case "kitchenLighter":
+          alert("Lighters and other kitchen tools go in the drawer!  Not on the floor!");
           $('#kitchenLighter').hide();
           break;
         default:
           break;
       }
-    }else{
-      aerosolStop = false;
-      towelStop = false;
-      np1Stop = false;
-      np2Stop = false;
-      sillyStop = false;
     }
   });
 
