@@ -1,0 +1,199 @@
+.container-fluid {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.background-img {
+    height: 100%;
+    width: 100%;
+}
+
+.helper {
+  position: fixed;
+	opacity: 0;
+  border: 5px solid yellow;
+}
+
+#ovenMittSpot {
+  width: 5%;
+  height: 9%;
+  top: 57%;
+  left: 66%;
+}
+
+#ramenSpot {
+  width: 9%;
+  height: 11%;
+  top: 52%;
+  left: 45%;
+}
+
+#potOfWaterSpot {
+  width: 7%;
+  height: 9%;
+  top: 51%;
+  left: 33%;
+}
+
+#forkSpot {
+  width: 24%;
+  height: 25%;
+  top: 66%;
+  left: 7%;
+}
+
+#formulaSpot {
+  width: 24%;
+  height: 25%;
+  top: 12%;
+  left: 10%;
+}
+
+#ramenBoxSpot {
+  width: 24%;
+  height: 25%;
+  top: 12%;
+  left: 10%;
+}
+
+#kitchenCoffeeSpot {
+  width: 9%;
+  height: 11%;
+  top: 48%;
+  left: 15%;
+}
+
+#kitchenLighterSpot {
+  width: 24%;
+  height: 25%;
+  top: 66%;
+  left: 7%;
+}
+
+#bbqLighter {
+	position:fixed;
+	left:85%;
+	top:94%;
+	width:5%;
+	height:5%;
+}
+
+#garageBaby {
+	position: fixed;
+	left:28%;
+	top:86%;
+	width:8%;
+	height:15%;
+}
+
+#milkJug {
+	position:fixed;
+	left:75%;
+	top:89%;
+	width:3.4%;
+	height:10%;
+}
+
+#boxes {
+	position:fixed;
+	left:61%;
+	top:58.5%;
+	width:16%;
+	height:25%;
+}
+
+#fertilizer {
+	position:fixed;
+	left:16%;
+	top:85%;
+	width:9%;
+	height:7.5%;
+}
+
+#gasCan {
+	position:fixed;
+	left:82%;
+	top:42%;
+	width:3.2%;
+	height:9%;
+}
+
+#hotExhaust {
+	position:fixed;
+	left:39.2%;
+	top:88.4%;
+	width:3.5%;
+	height:3%;
+}
+
+#extCord {
+	position:fixed;
+	left:23.4%;
+	top:74.2%;
+	width:4%;
+	height:10%;
+}
+
+#motorcycle {
+	position:fixed;
+	left:57%;
+	top:74%;
+	width:13%;
+	height:25%;
+}
+
+#ovenMittFirm {
+	position: fixed;
+	display: none;
+  left: 65.7%;
+	top: 57.8%;
+	width: 4%;
+	height: 7.3%;
+}
+
+#ramenFirm {
+	position: fixed;
+	display: none;
+  left: 46.7%;
+  top: 44.8%;
+  width: 5%;
+  height: 15%;
+}
+
+#potOfWaterFirm {
+	position: fixed;
+	display: none;
+  left: 34.7%;
+  top: 46.8%;
+  width: 4.5%;
+  height: 13%;
+}
+
+#kitchenCoffeeFirm {
+	position: fixed;
+	display: none;
+  left: 18%;
+  top: 50%;
+	height: 10%;
+	width: 5%;
+}
+
+#levelWin {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+
+#back {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 5%;
+	height: 11%;
+}
