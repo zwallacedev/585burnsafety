@@ -338,11 +338,39 @@ h1 {
 
 #kitchenlevelbutton {
 	position: fixed;
-	top:66%;
+	top:72%;
 	left: 44%;
 	height:5%;
 	width:15%;
-	opacity:0;
+	opacity:1;
+	background-color: #7BAFD4;
+	border: 2px, solid;
+	border-radius: 15px;
+	color: white;
+    text-transform: uppercase;
+    color: white;
+}
+
+#kitchenlevelbutton:hover {
+	color: #000080;
+}
+
+#kitchendraglevelbutton {
+	position: fixed;
+	top:77%;
+	left: 44%;
+	height:5%;
+	width:15%;
+	opacity:1;
+	background-color: #7BAFD4;
+	border: 2px, solid;
+	border-radius: 15px;
+	text-transform: uppercase;
+	color: white;
+}
+
+#kitchendraglevelbutton:hover {
+	color: #000080;
 }
 
 #garagelevelbutton {
@@ -351,7 +379,16 @@ h1 {
 	left: 74%;
 	height:5%;
 	width:15%;
-	opacity:0;
+	opacity:1;
+	background-color: #7BAFD4;
+	border: 2px, solid;
+	border-radius: 15px;
+	text-transform: uppercase;
+	color: white;
+}
+
+#garagelevelbutton:hover {
+	color: #000080;
 }
 
 #livingroomlevelbutton {
@@ -360,7 +397,52 @@ h1 {
 	left: 44%;
 	height:5%;
 	width:15%;
-	opacity:0;
+	opacity:1;
+	background-color: #7BAFD4;
+	border: 2px, solid;
+	border-radius: 15px;
+	text-transform: uppercase;
+	color: white;
+}
+
+#livingroomlevelbutton:hover {
+	color: #000080;
+}
+
+#livingroomdraglevelbutton {
+	position: fixed;
+	top:36%;
+	left: 44%;
+	height:5%;
+	width:15%;
+	opacity:1;
+	background-color: #7BAFD4;
+	border: 2px, solid;
+	border-radius: 15px;
+	text-transform: uppercase;
+	color: white;
+}
+
+#livingroomdraglevelbutton:hover {
+	color: #000080;
+}
+
+#garagedraglevelbutton {
+	position: fixed;
+	top: 37%;
+	left: 74%;
+	height:5%;
+	width:15%;
+	opacity:1;
+	background-color: #7BAFD4;
+	border: 2px, solid;
+	border-radius: 15px;
+	text-transform: uppercase;
+	color: white;
+}
+
+#garagedraglevelbutton:hover {
+	color: #000080;
 }
 
 #back{
