@@ -27,14 +27,17 @@ var hashValue= {
   'ovenMitt': 'You should wear an ovenmitt when pulling something out of the oven.'
 }
 $(document).ready(function () {
-
     var livingRoomOneScore = parseInt(localStorage.getItem('lvonescore'));
     var kitchenOneScore = parseInt(localStorage.getItem('konescore'));
-    if(livingRoomOneScore != null){
+    var garageOneScore = parseInt(localStorage.getItem('gonescore'));
+    if(livingRoomOneScore != null && livingRoomOneScore != '' && !isNaN(livingRoomOneScore)){
       score = score + livingRoomOneScore;
     }
-    if(kitchenOneScore != null){
+    if(kitchenOneScore != null && kitchenOneScore != '' && !isNaN(kitchenOneScore)){
       score+=kitchenOneScore;
+    }
+    if(garageOneScore != null && garageOneScore != '' && !isNaN(garageOneScore)){
+      score+=garageOneScore;
     }
   $('.goodClick').click(function(e){
     e.stopPropagation();
@@ -73,6 +76,8 @@ $(document).ready(function () {
   }else if($('#level').attr('name') == 'menu'){
     $('#totalScore').html('Score: '+score);
     return;
+  }else if)$('#level').attr('name') == 'garageone'){
+    hazardsFound = 8;
   }
 
   $('.container-fluid').click(function(e){
@@ -134,6 +139,8 @@ var checkScore = function(msLeft){
     localStorage.setItem("lvonescore", score);
   }else if($('#level').attr('name') == 'kitchenone'){
     localStorage.setItem("konescore", score);
+  }else if($('#level').attr('name') == 'garageone'){
+    localStorage.setItem("gonescore", score);
   }
 
 }
