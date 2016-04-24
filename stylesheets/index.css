@@ -183,7 +183,7 @@ h1 {
 	visibility: hidden;
 }
 
-#levelWin {
+#threeStars {
 	position: fixed;
 	left: 0%;
 	top: 0%;
@@ -191,7 +191,22 @@ h1 {
 	height: 100%;
 	visibility: hidden;
 }
-
+#twoStars {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+#oneStar {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
 
 #ramen {
 	position: fixed;

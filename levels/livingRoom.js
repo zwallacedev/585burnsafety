@@ -59,7 +59,10 @@ $(document).ready(function () {
     if(livingRoomTwoScore != null && livingRoomTwoScore != '' && !isNaN(livingRoomTwoScore)){
       totalScore+=livingRoomTwoScore;
     }
-
+$('.hideWin').click(function(e){
+    e.stopPropagation();
+     $(this).toggle();
+   });
   $('.goodClick').click(function(e){
     e.stopPropagation();
     if(this.id == "workingSD"){
@@ -150,11 +153,24 @@ function countdown( elementName, minutes, seconds )
 var checkScore = function(msLeft){
   if(score <= 0 & msLeft <= 0){
     alert('Game over.');
+
     return;
   }
   score = Math.round(Math.pow(score, 1.2));
   score += Math.round(msLeft/1000);
   alert('You had a score of '+score);
+  if(score>=390){
+     $("#threeStars").css('visibility', 'visible');
+  }
+  else if(score<390 & score>=200){
+    $("#twoStars").css('visibility', 'visible');
+  }
+  else if(score<200 & score>60){
+    $("#twoStars").css('visibility', 'visible');
+  }
+  else{
+    //add a no stars image
+  }
   if($('#level').attr('name')=='livingroomone'){
     localStorage.setItem("lvonescore", score);
   }else if($('#level').attr('name') == 'kitchenone'){
@@ -181,10 +197,12 @@ function decrementCnt(draggable){
   }
   hazardsFound--;
   $(".counter").html(hazardsFound);
-  if(hazardsFound<=0){
-    $("#levelWin").css('visibility', 'visible');
-  }
+  //if(hazardsFound<=0){
+  //  $("#levelWin").css('visibility', 'visible');
+  //} 
 }
+
+
 var getScore = function(){
     var tmp = 0;
     var livingRoomOneScore = parseInt(localStorage.getItem('lvonescore'));
