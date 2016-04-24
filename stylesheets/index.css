@@ -388,6 +388,7 @@ h1 {
 	border-radius: 15px;
 	text-transform: uppercase;
 	color: white;
+	font-size: 75%;
 }
 
 #kitchendraglevelbutton:hover {
@@ -442,6 +443,7 @@ h1 {
 	border-radius: 15px;
 	text-transform: uppercase;
 	color: white;
+	font-size: 75%;
 }
 
 #livingroomdraglevelbutton:hover {
@@ -460,6 +462,7 @@ h1 {
 	border-radius: 15px;
 	text-transform: uppercase;
 	color: white;
+	font-size: 75%;
 }
 
 #garagedraglevelbutton:hover {
