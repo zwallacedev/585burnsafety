@@ -57,37 +57,45 @@ $(document).ready(function () {
           alert("Ask a parent to reach something for you!");
           $('#ramen').hide();
           $('#ramenFirm').toggle();
+          decrementCnt();
           break;
         case "potOfWater":
           alert("Keep hot pots of away from the edge of the counter!");
           $('#potOfWater').hide();
           $('#potOfWaterFirm').toggle();
+          decrementCnt();
           break;
         case "fork":
           alert("Keep forks in their correct place - the drawer!");
           $('#fork').hide();
+          decrementCnt();
           break;
         case "formula":
           alert("Don't touch or drink anything thats smoking!");
           $('#formula').hide();
+          decrementCnt();
           break;
         case "ovenMitt":
           alert("Use an oven mit when handling hot things in the kitchen!");
           $('#ovenMitt').hide();
           $('#ovenMittFirm').toggle();
+          decrementCnt();
           break;
         case "ramenBox":
           alert("Food doesn't belong on top of the microwave!");
           $('#ramenBox').hide();
+          decrementCnt();
           break;
         case "kitchenCoffee":
           alert("Hot drinks don't belong on the edge of the counter!");
           $('#kitchenCoffee').hide();
           $('#kitchenCoffeeFirm').toggle();
+          decrementCnt();
           break;
         case "kitchenLighter":
           alert("Lighters and other kitchen tools go in the drawer!  Not on the floor!");
           $('#kitchenLighter').hide();
+          decrementCnt();
           break;
         default:
           break;

@@ -5,7 +5,17 @@
 	top: 0;
 	left: 0;
 }
-
+#timer {
+	position:fixed;
+	background-color: transparent;
+	width: 15%;
+	height: 9%;
+	left: 51%;
+	top: 26%;
+	font-size: 3.5vw;
+	color: rgb(12,185,61);
+	text-align: center;
+}
 .background-img {
     height: 100%;
     width: 100%;
@@ -101,6 +111,17 @@
 	height: 9%;
 }
 
+#counter {
+	position: fixed;
+	background-color: transparent;
+	width: 15%;
+	height: 9%;
+	left: 51%;
+	top: 17%;
+	font-size: 3.5vw;
+	color: rgb(12,185,61);
+	text-align: center;
+}
 #outletCover {
 	position: fixed;
 	left: 5.2%;

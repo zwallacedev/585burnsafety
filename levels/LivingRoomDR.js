@@ -7,8 +7,8 @@ var sillyTry = 0;
 var origOffset;
 
 $(document).ready(function () {
-  $(".drag").draggable();
 
+  $(".drag").draggable();
   $(".drag").hover(function( event ) {
     if(!isDown){
       thisWidth = $("#"+event.target.id).width();
@@ -55,19 +55,23 @@ $(document).ready(function () {
           $('#workingSD').hide();
           $('#brokenSD').hide();
           $('#workingSDFirm').toggle();
+          decrementCnt(true);
           break;
         case "matches":
           alert("Don't play with matches!  Put them somewhere safe if you see them!");
           $('#matches').hide();
+          decrementCnt(true);
           break;
         case "lighter":
           alert("Don't play with lighters!  Put them somewhere safe if you see them!");
           $('#lighter').hide();
+          decrementCnt(true);
           break;
         case "outletCover":
           alert("Outlets should be covered at all times!  Tell a parent if you see one open!");
           $('#outletCover').hide();
           $('#outletCoverFirm').toggle();
+          decrementCnt(true);
           break;
         default:
           break;

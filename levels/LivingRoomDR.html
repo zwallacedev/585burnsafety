@@ -8,6 +8,7 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/LivingRoomDR.css">
+	<!--<link rel="stylesheet" type="text/css" href="../stylesheets/index.css">-->
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -15,12 +16,17 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+	<script type="text/javascript" src="livingRoom.js"></script>
 	<script type="text/javascript" src="LivingRoomDR.js"></script>
 
 </head>
 
 <body>
+<div id="level" name="livingdraggable"></div>
+
 <div class="container-fluid">
+	<div class="counter" id="counter">4</div>
+	<div id="timer" class="timer"></div>
 	<img src="../images/LivingRoomImages/background.png" class="background-img">
 	<div class="helper" id="matchesSpot"></div>
 	<div class="helper" id="workingSDSpot"></div>

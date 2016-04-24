@@ -285,7 +285,28 @@ h1 {
 	width:8%;
 	height:15%;
 }
-
+#garageTimer {
+	position:fixed;
+	background-color: transparent;
+	width: 15%;
+	height: 9%;
+	left: 37%;
+	top: 43%;
+	font-size: 2.5vw;
+	color: rgb(12,185,61);
+	text-align: center;
+}
+#garageCounter {
+	position: fixed;
+	background-color: transparent;
+	width: 10%;
+	height: 5%;
+	left: 40%;
+	top: 37%;
+	font-size: 2.5vw;
+	color: rgb(12,185,61);
+	text-align: center;
+}
 #milkJug {
 	position:fixed;
 	left:75%;

@@ -54,23 +54,28 @@ $(document).ready(function () {
           alert("You correctly placed the barbeque lighter on the shelf!");
           $('#bbqLighter').hide();
           $('#bbqLighterFirm').toggle();
+          decrementCnt();
           break;
         case "garageBaby":
           alert("Kids shouldn't play in the garage!");
           $('#garageBaby').hide();
+          decrementCnt();
           break;
         case "gasCan":
           alert("Keep gas cans on the floor!");
           $('#gasCan').hide();
           $('#gasCanFirm').toggle();
+          decrementCnt();
           break;
         case "extCord":
           alert("Open extension cords are dangerous!  Tell a parent if you see one!");
           $('#extCord').hide();
+          decrementCnt();
           break;
         case "fertilizer":
           alert("Open fertilizer shouldn't be in the garage!");
           $('#fertilizer').hide();
+          decrementCnt();
           break;
         default:
           break;

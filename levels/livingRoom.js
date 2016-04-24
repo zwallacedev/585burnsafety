@@ -1,7 +1,9 @@
 var hazardsFound;
+var draggable = false;
 var outletFixed = false;
 var ovenMittOn = false;
 var score = 0;
+var totalScore = 0;
 var hashValue= {
   'ashTray': 'There\'s a lit cigarette in the ash tray.',
   'brokenSD': 'The Smoke detector should be working.',
@@ -27,18 +29,37 @@ var hashValue= {
   'ovenMitt': 'You should wear an ovenmitt when pulling something out of the oven.'
 }
 $(document).ready(function () {
+  // localStorage.setItem('lvonescore', 0);
+  // localStorage.setItem('lvtwoscore', 0);
+  // localStorage.setItem('konescore', 0);
+  // localStorage.setItem('ktwoscore', 0);
+  // localStorage.setItem('gonescore', 0);
+
     var livingRoomOneScore = parseInt(localStorage.getItem('lvonescore'));
     var kitchenOneScore = parseInt(localStorage.getItem('konescore'));
     var garageOneScore = parseInt(localStorage.getItem('gonescore'));
+    var garageTwoScore = parseInt(localStorage.getItem('gtwoscore'));
+    var livingRoomTwoScore = parseInt(localStorage.getItem('lvtwoscore'));
+    var kitchenTwoScore = parseInt(localStorage.getItem('ktwoscore'));
     if(livingRoomOneScore != null && livingRoomOneScore != '' && !isNaN(livingRoomOneScore)){
-      score = score + livingRoomOneScore;
+      totalScore+=livingRoomOneScore;
     }
     if(kitchenOneScore != null && kitchenOneScore != '' && !isNaN(kitchenOneScore)){
-      score+=kitchenOneScore;
+      totalScore+=kitchenOneScore;
+    }
+    if(kitchenTwoScore != null && kitchenTwoScore != '' && !isNaN(kitchenTwoScore)){
+      totalScore+=kitchenTwoScore;
     }
     if(garageOneScore != null && garageOneScore != '' && !isNaN(garageOneScore)){
-      score+=garageOneScore;
+      totalScore+=garageOneScore;
     }
+    if(garageTwoScore != null && garageTwoScore != '' && !isNaN(garageTwoScore)){
+      totalScore+=garageTwoScore;
+    }
+    if(livingRoomTwoScore != null && livingRoomTwoScore != '' && !isNaN(livingRoomTwoScore)){
+      totalScore+=livingRoomTwoScore;
+    }
+
   $('.goodClick').click(function(e){
     e.stopPropagation();
     if(this.id == "workingSD"){
@@ -47,7 +68,7 @@ $(document).ready(function () {
     if(this.id == "outletCover"){
       if(!outletFixed){
         $("#outletCover").css('opacity', '1');
-        decrementCnt();
+        decrementCnt(false);
         outletFixed = true;
       }
       return;
@@ -56,7 +77,7 @@ $(document).ready(function () {
     if(this.id == "ovenMitt"){
       if(!ovenMittOn){
         $("#ovenMitt").css('opacity', '1');
-        decrementCnt();
+        decrementCnt(false);
         ovenMittOn = true;
         alert(hashValue[this.id.toString()]);
       }
@@ -66,7 +87,7 @@ $(document).ready(function () {
     if(this.id == "brokenSD"){
       $("#workingSD").css('visibility', 'visible');
     }
-    decrementCnt();
+    decrementCnt(false);
     alert(hashValue[this.id.toString()]);
   });
   if($('#level').attr('name')=='livingroomone'){
@@ -74,10 +95,16 @@ $(document).ready(function () {
   }else if($('#level').attr('name') == 'kitchenone'){
     hazardsFound = 11;
   }else if($('#level').attr('name') == 'menu'){
-    $('#totalScore').html('Score: '+score);
+    $('#totalScore').html('Score: '+totalScore);
     return;
-  }else if)$('#level').attr('name') == 'garageone'){
+  }else if($('#level').attr('name') == 'garageone'){
     hazardsFound = 8;
+  }else if($('#level').attr('name') == 'livingdraggable'){
+    hazardsFound = 4;
+  }else if($('#level').attr('name') == 'kitchendraggable'){
+    hazardsFound = 8;
+  }else if($('#level').attr('name') == 'garagedraggable'){
+    hazardsFound = 5;
   }
 
   $('.container-fluid').click(function(e){
@@ -119,14 +146,7 @@ function countdown( elementName, minutes, seconds )
     updateTimer();
 }
 
-var decrementCnt = function(){
-  hazardsFound--;
-  score += 10;
-  $(".counter").html(hazardsFound);
-  if(hazardsFound<=0){
-    $("#levelWin").css('visibility', 'visible');
-  }
-}
+
 var checkScore = function(msLeft){
   if(score <= 0 & msLeft <= 0){
     alert('Game over.');
@@ -141,9 +161,43 @@ var checkScore = function(msLeft){
     localStorage.setItem("konescore", score);
   }else if($('#level').attr('name') == 'garageone'){
     localStorage.setItem("gonescore", score);
+  }else if($('#level').attr('name') == 'livingdraggable'){
+    localStorage.setItem('lvtwoscore', score);
+  }else if($('#level').attr('name') == 'kitchendraggable'){
+    localStorage.setItem('ktwoscore', score);
+  }else if($('#level').attr('name') == 'garagedraggable'){
+    localStorage.setItem('gtwoscore', score);
   }
 
 }
     countdown( "timer", 3, 30 );
 
 });
+function decrementCnt(draggable){
+  if(draggable){
+    score+=20;
+  }else{
+    score+=10;
+  }
+  hazardsFound--;
+  $(".counter").html(hazardsFound);
+  if(hazardsFound<=0){
+    $("#levelWin").css('visibility', 'visible');
+  }
+}
+var getScore = function(){
+    var tmp = 0;
+    var livingRoomOneScore = parseInt(localStorage.getItem('lvonescore'));
+    var kitchenOneScore = parseInt(localStorage.getItem('konescore'));
+    var garageOneScore = parseInt(localStorage.getItem('gonescore'));
+    if(livingRoomOneScore != null && livingRoomOneScore != '' && !isNaN(livingRoomOneScore)){
+      tmp += livingRoomOneScore;
+    }
+    if(kitchenOneScore != null && kitchenOneScore != '' && !isNaN(kitchenOneScore)){
+      tmp+=kitchenOneScore;
+    }
+    if(garageOneScore != null && garageOneScore != '' && !isNaN(garageOneScore)){
+      tmp+=garageOneScore;
+    } 
+    return tmp;
+  };
