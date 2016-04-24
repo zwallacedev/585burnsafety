@@ -165,10 +165,11 @@ var checkScore = function(msLeft){
   else if(score<390 & score>=200){
     $("#twoStars").css('visibility', 'visible');
   }
-  else if(score<200 & score>60){
-    $("#twoStars").css('visibility', 'visible');
+  else if(score<200 & score>=60){
+    $("#oneStar").css('visibility', 'visible');
   }
   else{
+    $("#noStars").css('visibility', 'visible');
     //add a no stars image
   }
   if($('#level').attr('name')=='livingroomone'){
@@ -186,7 +187,7 @@ var checkScore = function(msLeft){
   }
 
 }
-    countdown( "timer", 3, 30 );
+    countdown( "timer", 0, 30 );
 
 });
 function decrementCnt(draggable){
