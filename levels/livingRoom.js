@@ -7,26 +7,36 @@ var totalScore = 0;
 var hashValue= {
   'ashTray': 'Never leave cigarettes unattended or smoke while tired.  Smoke outside the home in a designated area.',
   'brokenSD': 'Working smoke alarms save lives!  Replace the battery at least once a year.  Smoke alarms should be placed in every level of the home and inside and outside of every sleeping room.',
-  'candle': 'The candle is lit when the person is not awake.',
-  'coffee': 'Hot coffee on table.',
-  'fray': 'Frayed TV Wire can cause an electrical fire.',
-  'lighter': 'Lighter left out where the baby could reach.',
-  'matches': 'Matches left out where the child can reach.',
-  'outletCover': 'You should have Outlet Covers.',
-  'powerStrip': 'Power strip error.',
-  'spaceHeater':'Space heater shouldn\'t be so close to the couch.',
-  'ramen': 'There is a hot bowl of ramen where the toddler is trying to reach.',
-  'potOfWater': 'The handle of the pot is sticking out.',
-  'fork': 'There\'s a fork in the microwave, and this definitely shouldn\'t be there.',
-  'formula': 'You shouldn\'t give a toddler hot formula because it has hot spots.',
+  'candle': 'Never burn candles while unattended or near curtains or other objects that could easily catch fire.',
+  'coffee': 'Hot liquids burn like fire, keep liquids out of the reach of children and use anti-spill lids when possible.',
+  'fray': 'Replaced frayed wires throw away appliances with frayed wires.  Do not use if the power cords feels hot to touch.',
+  'lighter': 'Keep matches and cigarette lighters out of the reach of Children.  Place them in locked cabinets high above the counter tops.',
+  'matches': 'Keep matches and cigarette lighters out of the reach of Children.  Place them in locked cabinets high above the counter tops.',
+  'outletCover': 'Prevent the possibility of an electrical shock by using clear outlet covers.  Clear covers do not draw the child’s attention like brightly colored ones.',
+  'powerStrip': 'Do not overload power strips, use only the designated amount of plugs.  Do not use if the cord feel hot.',
+  'spaceHeater':'Space heaters should be kept three feet away from anything that can burn.  Use space heaters with automatic shut off features.',
+  'ramen': 'Be careful when removing hot objects from the microwave.  Remember to allow objects to cool before opening them.  To prevent a steam burn, open popcorn or objects covered in plastic film or popcorn away from you.',
+  'potOfWater': 'Cook on back burners…always turn pot handles to prevent them from being tipped over by children or adults.',
+  'fork': '',
+  'formula': 'Always test baby formula before giving it to children…if heated in the microwave, be aware of uneven heating. ',
   'baby': 'Create a kid safe zone in front of the stove. Teach children not to step inside the zone when the stove is on – or keep young children safe by keeping them out the kitchen while the stove is in use.',
-  'toddler': 'There shouldn\'t be a toddler in the kitchen.',
-  'burner': 'The front burner is on.',
-  'kitchenAshTray': 'There\'s a lit cigarette in the ash tray.',
-  'kitchenLighter': 'There\'s a lighter in the reach of a child.',
-  'kitchenCoffee': 'There\'s a hot coffee that can be easily knocked off the counter.',
-  'ramenBox': 'There shouldn\'t be anything on top of the microwave.',
-  'ovenMitt': 'You should wear an ovenmitt when pulling something out of the oven.'
+  'toddler': 'When cooking or preparing foods, keep children away from the stove or other areas in the kitchen that may pose a danger.  Encourage them to sit at the table or in sight of the food preparer.',
+  'burner': 'Create a “kid safe zone” in front of the stove.  Instruct children not to step inside the zone when the appliance is in use – or – for cooktops with front dials, place a guard over the dials to prevent them from accidently being turned on by little children. ',
+  'kitchenAshTray': 'If parents smoke, they should smoke outside of the home in a clearly defined area.  Tell a parent to dampen cigarette butts to ensure that they are extinguished.  Alert an adult if you see a cigarette unattended!',
+  'kitchenLighter': '',
+  'kitchenCoffee': 'Keep hot liquids  such as coffee at the back of the counter out of the reach of children.  For best results, use a coffee mug with a no-spill lid if possible. ',
+  'ramenBox': 'Properly store microwaveable foods in cabinets or on shelves and not on top of  the microwave.',
+  'ovenMitt': 'When handling hot pots and pans, use a long (over the wrist) oven mitt to prevent the possibility of a burn.  Be certain to replace the mitt when it becomes worn or thin.',
+  'crockpotCord':'Keep small appliances (crock pots, toasters, etc., at the back of the counter with the cords unplugged and out of reach. ',
+  'bbqLighter':'Flammable liquids such as lighter fluid should be stored on high shelves in well a ventilated area.',
+  'milkJug':'Store gasoline and other flammable in approved,  properly labeled containers.  ',
+  'boxes':'All exits need to be kept clear of boxes and other objects that may obstruct egress in the event of an emergency.',
+  'fertilizer':'Keep fertilizers, chemicals and other harmful liquids in tightly sealed, clearly labeled containers. ',
+  'gasCan':'Gasoline should be stored at room temperature, away from potential heat sources such as the sun, gas water heaters/furnaces and at least 50 feet from ignition sources such as pilot lights.',
+  'hotExhaust':'Make certain there is proper ventilation inside the garage, so that fumes are vented to the outside. Be wary of the hot exhaust outlets on recently used vehicles!',
+  'extCord':'All malfunctioning cords, chargers, etc should be discarded.  Never use cords or appliances that are in poor or frayed condition.',
+  'heater':'If you see any leaks, steam, smoke, or other possible problems with a water heater, tell and adult!',
+  'mcExhaust':'Make certain there is proper ventilation inside the garage, so that fumes are vented to the outside. Be wary of the hot exhaust outlets on recently used vehicles!',
 }
 $(document).ready(function () {
 
@@ -108,7 +118,7 @@ $('#popover-text').click(function(e){
     $('#totalScore').html('Score: '+totalScore);
     return;
   }else if($('#level').attr('name') == 'garageone'){
-    hazardsFound = 8;
+    hazardsFound = 9;
   }else if($('#level').attr('name') == 'livingdraggable'){
     hazardsFound = 4;
   }else if($('#level').attr('name') == 'kitchendraggable'){
