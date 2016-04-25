@@ -5,8 +5,8 @@ var ovenMittOn = false;
 var score = 0;
 var totalScore = 0;
 var hashValue= {
-  'ashTray': 'There\'s a lit cigarette in the ash tray.',
-  'brokenSD': 'The Smoke detector should be working.',
+  'ashTray': 'Never leave cigarettes unattended or smoke while tired.  Smoke outside the home in a designated area.',
+  'brokenSD': 'Working smoke alarms save lives!  Replace the battery at least once a year.  Smoke alarms should be placed in every level of the home and inside and outside of every sleeping room.',
   'candle': 'The candle is lit when the person is not awake.',
   'coffee': 'Hot coffee on table.',
   'fray': 'Frayed TV Wire can cause an electrical fire.',
@@ -19,7 +19,7 @@ var hashValue= {
   'potOfWater': 'The handle of the pot is sticking out.',
   'fork': 'There\'s a fork in the microwave, and this definitely shouldn\'t be there.',
   'formula': 'You shouldn\'t give a toddler hot formula because it has hot spots.',
-  'baby': 'There shouldn\'t be a baby in the kitchen.',
+  'baby': 'Create a kid safe zone in front of the stove. Teach children not to step inside the zone when the stove is on – or keep young children safe by keeping them out the kitchen while the stove is in use.',
   'toddler': 'There shouldn\'t be a toddler in the kitchen.',
   'burner': 'The front burner is on.',
   'kitchenAshTray': 'There\'s a lit cigarette in the ash tray.',
