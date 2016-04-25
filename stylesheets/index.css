@@ -3,6 +3,18 @@ h1 {
 	font-size: 3vmin;
 }
 
+#levelScore{
+	position: fixed;
+	height:5%;
+	width:10%;
+	top:50%;
+	left:44%;
+	color: white;
+	font-size: 3vmin;
+	visibility: hidden;
+	text-align: center;
+}
+
 .container-fluid {
 	position: fixed;
 	height: 100%;

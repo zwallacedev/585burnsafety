@@ -195,6 +195,8 @@ var checkScore = function(msLeft){
     $("#noStars").css('visibility', 'visible');
     //add a no stars image
   }
+  $("#levelScore").css('visibility', 'visible');
+  $("#levelScore").html('Score: '+score);
   if($('#level').attr('name')=='livingroomone'){
     localStorage.setItem("lvonescore", score);
   }else if($('#level').attr('name') == 'kitchenone'){
