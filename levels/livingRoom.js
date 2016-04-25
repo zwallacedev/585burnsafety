@@ -17,7 +17,7 @@ var hashValue= {
   'spaceHeater':'Space heaters should be kept three feet away from anything that can burn.  Use space heaters with automatic shut off features.',
   'ramen': 'Be careful when removing hot objects from the microwave.  Remember to allow objects to cool before opening them.  To prevent a steam burn, open popcorn or objects covered in plastic film or popcorn away from you.',
   'potOfWater': 'Cook on back burners…always turn pot handles to prevent them from being tipped over by children or adults.',
-  'fork': '',
+  'fork': 'Never place any metal object in a microwave! Placing a fork or any other metal object in a microwave could start a fire.',
   'formula': 'Always test baby formula before giving it to children…if heated in the microwave, be aware of uneven heating. ',
   'baby': 'Create a kid safe zone in front of the stove. Teach children not to step inside the zone when the stove is on – or keep young children safe by keeping them out the kitchen while the stove is in use.',
   'toddler': 'When cooking or preparing foods, keep children away from the stove or other areas in the kitchen that may pose a danger.  Encourage them to sit at the table or in sight of the food preparer.',
@@ -37,6 +37,7 @@ var hashValue= {
   'extCord':'All malfunctioning cords, chargers, etc should be discarded.  Never use cords or appliances that are in poor or frayed condition.',
   'heater':'If you see any leaks, steam, smoke, or other possible problems with a water heater, tell and adult!',
   'mcExhaust':'Make certain there is proper ventilation inside the garage, so that fumes are vented to the outside. Be wary of the hot exhaust outlets on recently used vehicles!',
+  'garageBaby':'Never let children play in the garage – it is a dangerous environment!',  
 }
 $(document).ready(function () {
 

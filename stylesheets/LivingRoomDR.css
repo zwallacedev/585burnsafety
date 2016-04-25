@@ -1,3 +1,64 @@
+#popover{
+	position: fixed;
+	left:0%;
+	top:0%;
+	width: 100%;
+	height: 100%;
+	display:none;
+}
+#popover-text{
+	position: fixed;
+	left:20%;
+	top:40%;
+	width:60%;
+	height:80%;
+	color:gray;
+	font-size:2.5vw;
+	display:none;
+}
+#levelScore{
+	position: fixed;
+	height:5%;
+	width:10%;
+	top:50%;
+	left:44%;
+	color: white;
+	font-size: 3vmin;
+	visibility: hidden;
+	text-align: center;
+}
+#threeStars {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+#twoStars {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+#oneStar {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+#noStars {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
 .container-fluid {
 	position: fixed;
 	height: 100%;
