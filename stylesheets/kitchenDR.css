@@ -219,3 +219,35 @@
 	color: rgb(12,185,61);
 	text-align: center;
 }
+#threeStars {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+#twoStars {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+#oneStar {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+#noStars {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}

@@ -187,7 +187,7 @@ var checkScore = function(msLeft){
   }
 
 }
-    countdown( "timer", 0, 30 );
+    countdown( "timer", 3, 30 );
 
 });
 function decrementCnt(draggable){

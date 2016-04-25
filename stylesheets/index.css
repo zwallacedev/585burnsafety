@@ -365,6 +365,13 @@ h1 {
 	width:3.5%;
 	height:3%;
 }
+#mcExhaust {
+	position:fixed;
+	left:64.7%;
+	top:84.2%;
+	width:3.5%;
+	height:9%;
+}
 #extCord {
 	position:fixed;
 	left:23.4%;
