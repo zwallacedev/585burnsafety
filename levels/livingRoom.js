@@ -29,11 +29,7 @@ var hashValue= {
   'ovenMitt': 'You should wear an ovenmitt when pulling something out of the oven.'
 }
 $(document).ready(function () {
-  // localStorage.setItem('lvonescore', 0);
-  // localStorage.setItem('lvtwoscore', 0);
-  // localStorage.setItem('konescore', 0);
-  // localStorage.setItem('ktwoscore', 0);
-  // localStorage.setItem('gonescore', 0);
+
 
     var livingRoomOneScore = parseInt(localStorage.getItem('lvonescore'));
     var kitchenOneScore = parseInt(localStorage.getItem('konescore'));
@@ -63,6 +59,16 @@ $('.hideWin').click(function(e){
     e.stopPropagation();
      $(this).toggle();
    });
+$('#popover').click(function(e){
+    e.stopPropagation();
+    $('#popover-text').toggle();
+     $(this).toggle();
+   });
+$('#popover-text').click(function(e){
+    e.stopPropagation();
+    $('#popover').toggle();
+     $(this).toggle();
+   });
   $('.goodClick').click(function(e){
     e.stopPropagation();
     if(this.id == "workingSD"){
@@ -74,6 +80,7 @@ $('.hideWin').click(function(e){
         decrementCnt(false);
         outletFixed = true;
       }
+      showPopover(this.id);
       return;
     }
 
@@ -82,7 +89,7 @@ $('.hideWin').click(function(e){
         $("#ovenMitt").css('opacity', '1');
         decrementCnt(false);
         ovenMittOn = true;
-        alert(hashValue[this.id.toString()]);
+        showPopover(this.id);
       }
       return;
     }
@@ -91,7 +98,7 @@ $('.hideWin').click(function(e){
       $("#workingSD").css('visibility', 'visible');
     }
     decrementCnt(false);
-    alert(hashValue[this.id.toString()]);
+    showPopover(this.id);
   });
   if($('#level').attr('name')=='livingroomone'){
     hazardsFound = 10;
@@ -108,6 +115,13 @@ $('.hideWin').click(function(e){
     hazardsFound = 8;
   }else if($('#level').attr('name') == 'garagedraggable'){
     hazardsFound = 5;
+  }else if($('#level').attr('name') == 'splash'){
+    localStorage.setItem('lvonescore', 0);
+    localStorage.setItem('lvtwoscore', 0);
+    localStorage.setItem('konescore', 0);
+    localStorage.setItem('ktwoscore', 0);
+    localStorage.setItem('gonescore', 0);
+    localStorage.setItem('gtwoscore', 0);
   }
 
   $('.container-fluid').click(function(e){
@@ -158,7 +172,6 @@ var checkScore = function(msLeft){
   }
   score = Math.round(Math.pow(score, 1.2));
   score += Math.round(msLeft/1000);
-  alert('You had a score of '+score);
   if(score>=390){
      $("#threeStars").css('visibility', 'visible');
   }
@@ -189,6 +202,7 @@ var checkScore = function(msLeft){
 }
     countdown( "timer", 3, 30 );
 
+
 });
 function decrementCnt(draggable){
   if(draggable){
@@ -198,9 +212,7 @@ function decrementCnt(draggable){
   }
   hazardsFound--;
   $(".counter").html(hazardsFound);
-  //if(hazardsFound<=0){
-  //  $("#levelWin").css('visibility', 'visible');
-  //} 
+
 }
 
 
@@ -220,3 +232,14 @@ var getScore = function(){
     } 
     return tmp;
   };
+
+var showPopover = function(id){
+  var test = hashValue[id.toString()];
+  if(test != undefined){
+    $("#popover-text").html(hashValue[id.toString()]);
+  }else{
+    $("#popover-text").html('Invalid hash value.');
+  }
+    $("#popover").toggle();
+    $("#popover-text").toggle();
+};
