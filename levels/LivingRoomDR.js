@@ -51,7 +51,6 @@ $(document).ready(function () {
     if(dist < 50){
       switch(event.target.id){
         case "workingSD":
-          //alert("Smoke detectors should be working at all times!  Tell a parent if you see a broken one!");
           $('#workingSD').hide();
           $('#brokenSD').hide();
           $('#workingSDFirm').toggle();
@@ -59,19 +58,16 @@ $(document).ready(function () {
           decrementCnt(true);
           break;
         case "matches":
-         // alert("Don't play with matches!  Put them somewhere safe if you see them!");
           $('#matches').hide();
           showPopover('matches');
           decrementCnt(true);
           break;
         case "lighter":
-          //alert("Don't play with lighters!  Put them somewhere safe if you see them!");
           $('#lighter').hide();
           showPopover('lighter');
           decrementCnt(true);
           break;
         case "outletCover":
-          //alert("Outlets should be covered at all times!  Tell a parent if you see one open!");
           $('#outletCover').hide();
           $('#outletCoverFirm').toggle();
           showPopover('outletCover');

@@ -54,53 +54,45 @@ $(document).ready(function () {
     if(dist < 75){
       switch(event.target.id){
         case "ramen":
-          alert("Ask a parent to reach something for you!");
           $('#ramen').hide();
           $('#ramenFirm').toggle();
           showPopover('ramen');
           decrementCnt();
           break;
         case "potOfWater":
-          alert("Keep hot pots of away from the edge of the counter!");
           $('#potOfWater').hide();
           $('#potOfWaterFirm').toggle();
           showPopover('potOfWater');
           decrementCnt();
           break;
         case "fork":
-          alert("Keep forks in their correct place - the drawer!");
           $('#fork').hide();
           showPopover('fork');
           decrementCnt();
           break;
         case "formula":
-          alert("Don't touch or drink anything thats smoking!");
           $('#formula').hide();
           showPopover('formula');
           decrementCnt();
           break;
         case "ovenMitt":
-          alert("Use an oven mit when handling hot things in the kitchen!");
           $('#ovenMitt').hide();
           $('#ovenMittFirm').toggle();
           showPopover('ovenMitt');
           decrementCnt();
           break;
         case "ramenBox":
-          alert("Food doesn't belong on top of the microwave!");
           $('#ramenBox').hide();
           showPopover('ramenBox');
           decrementCnt();
           break;
         case "kitchenCoffee":
-          alert("Hot drinks don't belong on the edge of the counter!");
           $('#kitchenCoffee').hide();
           $('#kitchenCoffeeFirm').toggle();
           showPopover('kitchenCoffee');
           decrementCnt();
           break;
         case "kitchenLighter":
-          alert("Lighters and other kitchen tools go in the drawer!  Not on the floor!");
           $('#kitchenLighter').hide();
           showPopover('kitchenLighter');
           decrementCnt();

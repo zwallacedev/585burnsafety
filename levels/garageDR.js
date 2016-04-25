@@ -51,33 +51,28 @@ $(document).ready(function () {
     if(dist < 75){
       switch(event.target.id){
         case "bbqLighter":
-          alert("You correctly placed the barbeque lighter on the shelf!");
           $('#bbqLighter').hide();
           $('#bbqLighterFirm').toggle();
           showPopover('bbqLighter');
           decrementCnt();
           break;
         case "garageBaby":
-          alert("Kids shouldn't play in the garage!");
           $('#garageBaby').hide();
           showPopover('garageBaby');
           decrementCnt();
           break;
         case "gasCan":
-          alert("Keep gas cans on the floor!");
           $('#gasCan').hide();
           $('#gasCanFirm').toggle();
           showPopover('gasCan');
           decrementCnt();
           break;
         case "extCord":
-          alert("Open extension cords are dangerous!  Tell a parent if you see one!");
           $('#extCord').hide();
           showPopover('extCord');
           decrementCnt();
           break;
         case "fertilizer":
-          alert("Open fertilizer shouldn't be in the garage!");
           $('#fertilizer').hide();
           showPopover('fertilizer');
           decrementCnt();
