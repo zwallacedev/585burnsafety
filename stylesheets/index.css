@@ -111,12 +111,25 @@ h1 {
 }
 #kitchenCoffee {
 	position: fixed;
-	left: 7%;
-	top: 52%;
+	left: 20%;
+	top: 53.2%;
 	height: 10%;
 	width: 5%;
 }
-
+#crockpot {
+	position: fixed;
+	left: 7%;
+	top: 51%;
+	height: 10%;
+	width: 10%;
+}
+#crockpotCord {
+	position: fixed;
+	left: 1.6%;
+	top: 58%;
+	height: 6%;
+	width: 7%;
+}
 #fray {
 	position: fixed;
 	left: 71%;
@@ -267,7 +280,13 @@ h1 {
 	width: 22%;
 	height: 70%;
 }
-
+#heater{
+	position:fixed;
+	left:26%;
+	top:47.8%;
+	width:10%;
+	height:33%;
+}
 #smallBurner{
 	position:fixed;
 	left:34.24%;

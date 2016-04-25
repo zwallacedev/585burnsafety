@@ -96,7 +96,7 @@ $('.hideWin').click(function(e){
   if($('#level').attr('name')=='livingroomone'){
     hazardsFound = 10;
   }else if($('#level').attr('name') == 'kitchenone'){
-    hazardsFound = 11;
+    hazardsFound = 10;
   }else if($('#level').attr('name') == 'menu'){
     $('#totalScore').html('Score: '+totalScore);
     return;
