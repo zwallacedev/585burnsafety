@@ -133,6 +133,7 @@ $('#popover-text').click(function(e){
     localStorage.setItem('ktwoscore', 0);
     localStorage.setItem('gonescore', 0);
     localStorage.setItem('gtwoscore', 0);
+    totalScore= 0;
   }
 
   $('.container-fluid').click(function(e){
