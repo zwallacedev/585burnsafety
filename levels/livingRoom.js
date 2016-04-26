@@ -4,6 +4,8 @@ var outletFixed = false;
 var ovenMittOn = false;
 var score = 0;
 var totalScore = 0;
+var paused = false;
+var resumed = false;
 var hashValue= {
   'ashTray': 'Never leave cigarettes unattended or smoke while tired.  Smoke outside the home in a designated area.',
   'brokenSD': 'Working smoke alarms save lives!  Replace the battery at least once a year.  Smoke alarms should be placed in every level of the home and inside and outside of every sleeping room.',
@@ -74,11 +76,15 @@ $('#popover').click(function(e){
     e.stopPropagation();
     $('#popover-text').toggle();
      $(this).toggle();
+     paused = false;
+     resumed = true;
    });
 $('#popover-text').click(function(e){
     e.stopPropagation();
     $('#popover').toggle();
      $(this).toggle();
+     paused= false;
+     resumed = true;
    });
   $('.goodClick').click(function(e){
     e.stopPropagation();
@@ -143,7 +149,8 @@ $('#popover-text').click(function(e){
 //this is for the timer
 function countdown( elementName, minutes, seconds )
 {
-    var element, endTime, hours, mins, msLeft, time;
+    var element, endTime, hours, mins, msLeft, time, pauseTime, resumeTime;
+    var firstPause = true;
     function twoDigits( n )
     {
         return (n <= 9 ? "0" + n : n);
@@ -151,26 +158,38 @@ function countdown( elementName, minutes, seconds )
 
     function updateTimer()
     {
+        if(paused){
+          if(firstPause){
+            pauseTime = (+new Date);
+            firstPause = false;
+          }
+          setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+        if(resumed){
+          resumeTime = (+new Date);
+          var diff = resumeTime - pauseTime;
+          endTime += diff;
+          resumed = false;
+          firstPause = true;
+        }
         msLeft = endTime - (+new Date);
+
         if($(".counter").html() <= 0){
           checkScore(msLeft);
           return;
         }
         if ( msLeft < 1000 ) {
             checkScore(msLeft);
-            //alert('game over!');
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
             mins = time.getUTCMinutes();
-            //$("#timer").html(hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-            $(".timer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
+            if(!paused){
+              $(".timer").html(mins + ':' + twoDigits(time.getUTCSeconds()));
+            }
            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         }
     }
-
-    //element = document.getElementById( elementName );
-    //alert('here: '+element);
     endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
     updateTimer();
 }
@@ -248,6 +267,7 @@ var getScore = function(){
   };
 
 var showPopover = function(id){
+  paused = true;
   var test = hashValue[id.toString()];
   if(test != undefined){
     $("#popover-text").html(hashValue[id.toString()]);
