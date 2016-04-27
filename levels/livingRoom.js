@@ -187,7 +187,7 @@ function countdown( elementName, minutes, seconds )
         }
         if ( msLeft < 1000 ) {
             checkScore(msLeft);
-            alert('here');
+            //alert('here');
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
@@ -205,11 +205,11 @@ function countdown( elementName, minutes, seconds )
 
 var checkScore = function(msLeft){
   if(score <= 0 & msLeft <= 0){
-    alert('Game over.');
+    //alert('Game over.');
 
     return;
   }
-  alert(score);
+  //alert(score);
   score = Math.round(Math.pow(score, 1.2));
   score += Math.round(msLeft/1000);
   if(score>=390){
