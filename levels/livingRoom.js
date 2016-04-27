@@ -151,6 +151,7 @@ function countdown( elementName, minutes, seconds )
 {
     var element, endTime, hours, mins, msLeft, time, pauseTime, resumeTime;
     var firstPause = true;
+    var checked = false;
     function twoDigits( n )
     {
         return (n <= 9 ? "0" + n : n);
@@ -166,6 +167,9 @@ function countdown( elementName, minutes, seconds )
           setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         }
         if(resumed){
+          if(firstPause){
+            pauseTime = (+new Date);
+          }
           resumeTime = (+new Date);
           var diff = resumeTime - pauseTime;
           endTime += diff;
@@ -175,11 +179,15 @@ function countdown( elementName, minutes, seconds )
         msLeft = endTime - (+new Date);
 
         if($(".counter").html() <= 0){
-          checkScore(msLeft);
+          if(!checked){
+            checkScore(msLeft);
+            checked = true;
+          }
           return;
         }
         if ( msLeft < 1000 ) {
             checkScore(msLeft);
+            alert('here');
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
@@ -201,6 +209,7 @@ var checkScore = function(msLeft){
 
     return;
   }
+  alert(score);
   score = Math.round(Math.pow(score, 1.2));
   score += Math.round(msLeft/1000);
   if(score>=390){
