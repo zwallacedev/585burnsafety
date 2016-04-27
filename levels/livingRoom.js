@@ -123,6 +123,24 @@ $('#popover-text').click(function(e){
     hazardsFound = 10;
   }else if($('#level').attr('name') == 'menu'){
     $('#totalScore').html('Score: '+totalScore);
+    var lvone = localStorage.getItem('lvonedone');
+    var lvtwo = localStorage.getItem('lvtwodone');
+    var kone = localStorage.getItem('konedone');
+    var ktwo = localStorage.getItem('ktwodone');
+    var gone = localStorage.getItem('gonedone');
+    var gtwo = localStorage.getItem('gtwodone');
+
+    if(lvone && lvtwo && kone && ktwo && gone && gtwo){
+      //make sure that we don't show it unless they have just gone through all 6 levels.
+      localStorage.setItem('lvonedone', false);
+      localStorage.setItem('lvtwodone', false);
+      localStorage.setItem('konedone', false);
+      localStorage.setItem('ktwodone', false);
+      localStorage.setItem('gonedone', false);
+      localStorage.setItem('gtwodone', false);
+      //we show the end-game screen
+      
+    }
     return;
   }else if($('#level').attr('name') == 'garageone'){
     hazardsFound = 9;
@@ -229,16 +247,22 @@ var checkScore = function(msLeft){
   $("#levelScore").html('Score: '+score);
   if($('#level').attr('name')=='livingroomone'){
     localStorage.setItem("lvonescore", score);
+    localStorage.setItem("lvonedone", true);
   }else if($('#level').attr('name') == 'kitchenone'){
     localStorage.setItem("konescore", score);
+    localStorage.setItem("konedone", true);
   }else if($('#level').attr('name') == 'garageone'){
     localStorage.setItem("gonescore", score);
+    localStorage.setItem("gonedone", true);
   }else if($('#level').attr('name') == 'livingdraggable'){
     localStorage.setItem('lvtwoscore', score);
+    localStorage.setItem("lvtwodone", true);
   }else if($('#level').attr('name') == 'kitchendraggable'){
     localStorage.setItem('ktwoscore', score);
+    localStorage.setItem("ktwodone", true);
   }else if($('#level').attr('name') == 'garagedraggable'){
     localStorage.setItem('gtwoscore', score);
+    localStorage.setItem("gtwodone", true);
   }
 
 }
@@ -248,13 +272,12 @@ var checkScore = function(msLeft){
 });
 function decrementCnt(draggable){
   if(draggable){
-    score+=20;
+    score+=25;
   }else{
     score+=10;
   }
   hazardsFound--;
   $(".counter").html(hazardsFound);
-
 }
 
 
