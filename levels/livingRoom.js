@@ -138,7 +138,9 @@ $('#popover-text').click(function(e){
 
     if((lvone === 'true') && (lvtwo === 'true') && (kone === 'true') && (ktwo === 'true') && (gone === 'true') && (gtwo === 'true')){
       //make sure that we don't show it unless they have just gone through all 6 levels.
-      alert('here');
+      //alert('here');
+      $('#endScreen-text').html(totalScore);
+      $("#endScreenDiv").css('visibility', 'visible');
       localStorage.setItem('lvonedone', 'false');
       localStorage.setItem('lvtwodone', 'false');
       localStorage.setItem('konedone', 'false');
