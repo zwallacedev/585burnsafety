@@ -42,7 +42,14 @@ var hashValue= {
   'garageBaby':'Never let children play in the garage – it is a dangerous environment!',  
 }
 $(document).ready(function () {
-
+  /*
+        localStorage.setItem("lvonedone", 'true');
+        localStorage.setItem("konedone", 'true');
+        localStorage.setItem("gonedone", 'true');
+        localStorage.setItem("lvtwodone", 'true');
+        localStorage.setItem("ktwodone", 'true');
+        localStorage.setItem("gtwodone", 'true');
+*/
         
     //retrieving the score from localStorage.
     var livingRoomOneScore = parseInt(localStorage.getItem('lvonescore'));
@@ -76,6 +83,17 @@ $('.hideWin').click(function(e){
     e.stopPropagation();
      $(this).toggle();
    });
+$('#endScreen-text').click(function(e){
+    e.stopPropagation();
+  $('#endScreenDiv').toggle();
+  $('#endScreen-text').toggle();
+});
+
+$('#endScreenDiv').click(function(e){
+  e.stopPropagation();
+  $('#endScreenDiv').toggle();
+  $('#endScreen-text').toggle();
+});
 //show the popover when a hazard is clicked.
 $('#popover').click(function(e){
     e.stopPropagation();
