@@ -231,7 +231,10 @@ function countdown( elementName, minutes, seconds )
           return;
         }
         if ( msLeft < 1000 ) {
+          if(!checked){
             checkScore(msLeft);
+            checked = true;
+          }
             //alert('here');
         } else {
             time = new Date( msLeft );
@@ -251,9 +254,9 @@ function countdown( elementName, minutes, seconds )
     var checkScore = function(msLeft){
       if(score <= 0 & msLeft <= 0){
         //Game over.
-
         return;
       }
+      alert(score);
       score = Math.round(Math.pow(score, 1.2));
       score += Math.round(msLeft/1000);
       if(score>=390){
@@ -293,7 +296,7 @@ function countdown( elementName, minutes, seconds )
       }
 
     }
-    countdown( "timer", 3, 30 );
+    countdown( "timer", 0, 15 );
 
 
 });
