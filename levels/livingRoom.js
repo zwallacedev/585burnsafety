@@ -43,13 +43,16 @@ var hashValue= {
 }
 $(document).ready(function () {
 
-
+        
+    //retrieving the score from localStorage.
     var livingRoomOneScore = parseInt(localStorage.getItem('lvonescore'));
     var kitchenOneScore = parseInt(localStorage.getItem('konescore'));
     var garageOneScore = parseInt(localStorage.getItem('gonescore'));
     var garageTwoScore = parseInt(localStorage.getItem('gtwoscore'));
     var livingRoomTwoScore = parseInt(localStorage.getItem('lvtwoscore'));
     var kitchenTwoScore = parseInt(localStorage.getItem('ktwoscore'));
+
+    //make sure the number exists to avoid making it a NaN.
     if(livingRoomOneScore != null && livingRoomOneScore != '' && !isNaN(livingRoomOneScore)){
       totalScore+=livingRoomOneScore;
     }
@@ -68,10 +71,12 @@ $(document).ready(function () {
     if(livingRoomTwoScore != null && livingRoomTwoScore != '' && !isNaN(livingRoomTwoScore)){
       totalScore+=livingRoomTwoScore;
     }
+
 $('.hideWin').click(function(e){
     e.stopPropagation();
      $(this).toggle();
    });
+//show the popover when a hazard is clicked.
 $('#popover').click(function(e){
     e.stopPropagation();
     $('#popover-text').toggle();
@@ -79,6 +84,7 @@ $('#popover').click(function(e){
      paused = false;
      resumed = true;
    });
+//show the popover text when a hazard is clicked.
 $('#popover-text').click(function(e){
     e.stopPropagation();
     $('#popover').toggle();
@@ -130,16 +136,17 @@ $('#popover-text').click(function(e){
     var gone = localStorage.getItem('gonedone');
     var gtwo = localStorage.getItem('gtwodone');
 
-    if(lvone && lvtwo && kone && ktwo && gone && gtwo){
+    if((lvone === 'true') && (lvtwo === 'true') && (kone === 'true') && (ktwo === 'true') && (gone === 'true') && (gtwo === 'true')){
       //make sure that we don't show it unless they have just gone through all 6 levels.
-      localStorage.setItem('lvonedone', false);
-      localStorage.setItem('lvtwodone', false);
-      localStorage.setItem('konedone', false);
-      localStorage.setItem('ktwodone', false);
-      localStorage.setItem('gonedone', false);
-      localStorage.setItem('gtwodone', false);
+      alert('here');
+      localStorage.setItem('lvonedone', 'false');
+      localStorage.setItem('lvtwodone', 'false');
+      localStorage.setItem('konedone', 'false');
+      localStorage.setItem('ktwodone', 'false');
+      localStorage.setItem('gonedone', 'false');
+      localStorage.setItem('gtwodone', 'false');
       //we show the end-game screen
-      
+
     }
     return;
   }else if($('#level').attr('name') == 'garageone'){
@@ -221,51 +228,51 @@ function countdown( elementName, minutes, seconds )
 }
 
 
-var checkScore = function(msLeft){
-  if(score <= 0 & msLeft <= 0){
-    //alert('Game over.');
+    var checkScore = function(msLeft){
+      if(score <= 0 & msLeft <= 0){
+        //Game over.
 
-    return;
-  }
-  //alert(score);
-  score = Math.round(Math.pow(score, 1.2));
-  score += Math.round(msLeft/1000);
-  if(score>=390){
-     $("#threeStars").css('visibility', 'visible');
-  }
-  else if(score<390 & score>=200){
-    $("#twoStars").css('visibility', 'visible');
-  }
-  else if(score<200 & score>=60){
-    $("#oneStar").css('visibility', 'visible');
-  }
-  else{
-    $("#noStars").css('visibility', 'visible');
-    //add a no stars image
-  }
-  $("#levelScore").css('visibility', 'visible');
-  $("#levelScore").html('Score: '+score);
-  if($('#level').attr('name')=='livingroomone'){
-    localStorage.setItem("lvonescore", score);
-    localStorage.setItem("lvonedone", true);
-  }else if($('#level').attr('name') == 'kitchenone'){
-    localStorage.setItem("konescore", score);
-    localStorage.setItem("konedone", true);
-  }else if($('#level').attr('name') == 'garageone'){
-    localStorage.setItem("gonescore", score);
-    localStorage.setItem("gonedone", true);
-  }else if($('#level').attr('name') == 'livingdraggable'){
-    localStorage.setItem('lvtwoscore', score);
-    localStorage.setItem("lvtwodone", true);
-  }else if($('#level').attr('name') == 'kitchendraggable'){
-    localStorage.setItem('ktwoscore', score);
-    localStorage.setItem("ktwodone", true);
-  }else if($('#level').attr('name') == 'garagedraggable'){
-    localStorage.setItem('gtwoscore', score);
-    localStorage.setItem("gtwodone", true);
-  }
+        return;
+      }
+      score = Math.round(Math.pow(score, 1.2));
+      score += Math.round(msLeft/1000);
+      if(score>=390){
+         $("#threeStars").css('visibility', 'visible');
+      }
+      else if(score<390 & score>=200){
+        $("#twoStars").css('visibility', 'visible');
+      }
+      else if(score<200 & score>=60){
+        $("#oneStar").css('visibility', 'visible');
+      }
+      else{
+        $("#noStars").css('visibility', 'visible');
+        //add a no stars image
+      }
 
-}
+      $("#levelScore").css('visibility', 'visible');
+      $("#levelScore").html('Score: '+score);
+      if($('#level').attr('name')=='livingroomone'){
+        localStorage.setItem("lvonescore", score);
+        localStorage.setItem("lvonedone", 'true');
+      }else if($('#level').attr('name') == 'kitchenone'){
+        localStorage.setItem("konescore", score);
+        localStorage.setItem("konedone", 'true');
+      }else if($('#level').attr('name') == 'garageone'){
+        localStorage.setItem("gonescore", score);
+        localStorage.setItem("gonedone", 'true');
+      }else if($('#level').attr('name') == 'livingdraggable'){
+        localStorage.setItem('lvtwoscore', score);
+        localStorage.setItem("lvtwodone", 'true');
+      }else if($('#level').attr('name') == 'kitchendraggable'){
+        localStorage.setItem('ktwoscore', score);
+        localStorage.setItem("ktwodone", 'true');
+      }else if($('#level').attr('name') == 'garagedraggable'){
+        localStorage.setItem('gtwoscore', score);
+        localStorage.setItem("gtwodone", 'true');
+      }
+
+    }
     countdown( "timer", 3, 30 );
 
 
