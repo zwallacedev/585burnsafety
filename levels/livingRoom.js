@@ -256,7 +256,7 @@ function countdown( elementName, minutes, seconds )
         //Game over.
         return;
       }
-      alert(score);
+      //alert(score);
       score = Math.round(Math.pow(score, 1.2));
       score += Math.round(msLeft/1000);
       if(score>=390){
@@ -296,7 +296,7 @@ function countdown( elementName, minutes, seconds )
       }
 
     }
-    countdown( "timer", 0, 15 );
+    countdown( "timer", 3, 30 );
 
 
 });
