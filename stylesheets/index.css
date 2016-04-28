@@ -563,3 +563,29 @@ h1 {
    white-space: -o-pre-wrap;   /* Opera 7 */    
    word-wrap: break-word;      /* IE */
 }
+#endScreenDiv{
+	position: fixed;
+	left:0%;
+	top:0%;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	
+}
+#endScreen{
+	position: fixed;
+	left:0%;
+	top:0%;
+	width: 100%;
+	height: 100%;
+	
+}
+#endScreen-text{
+	position: fixed;
+	left:58%;
+	top:78%;
+	width:60%;
+	height:80%;
+	color:white;
+	font-size:3vw;
+}
